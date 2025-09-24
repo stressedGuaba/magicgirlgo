@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://b8v8gk3wxevwm"]
+
+[ext_resource type="Script" uid="uid://cj8afjnkrkolv" path="res://gun.gd" id="1_dk5gl"]
+[ext_resource type="Texture2D" uid="uid://djlqc53blaxod" path="res://assets/tempgun.png" id="1_vk1bi"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dk5gl"]
+radius = 277.045
+
+[node name="Gun" type="Area2D"]
+collision_layer = 2
+collision_mask = 3
+script = ExtResource("1_dk5gl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_dk5gl")
+
+[node name="WeaponPivot" type="Marker2D" parent="."]
+
+[node name="Tempgun" type="Sprite2D" parent="WeaponPivot"]
+position = Vector2(101, 7.62939e-06)
+scale = Vector2(0.420354, 0.417012)
+texture = ExtResource("1_vk1bi")
+
+[node name="ShootingPoint" type="Marker2D" parent="WeaponPivot/Tempgun"]
+position = Vector2(88.021, -1.82954e-05)
