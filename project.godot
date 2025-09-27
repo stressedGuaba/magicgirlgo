@@ -11,9 +11,8 @@ config_version=5
 [application]
 
 config/name="magic girl go"
-run/main_scene="uid://0yltul1d0imt"
+run/main_scene="uid://qr5gi0nc7qj"
 config/features=PackedStringArray("4.4", "Forward Plus")
-config/icon="res://icon.svg"
 
 [editor_plugins]
 

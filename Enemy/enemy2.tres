@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Enemy" load_steps=3 format=3 uid="uid://fxklkxbjaser"]
+
+[ext_resource type="Script" uid="uid://cqenl4o4vuct3" path="res://EnemyType.gd" id="1_aiac0"]
+[ext_resource type="Texture2D" uid="uid://dvdhyl3rptwew" path="res://assets/temp enemy2.png" id="2_3htpf"]
+
+[resource]
+script = ExtResource("1_aiac0")
+title = "enemy2"
+texture = ExtResource("2_3htpf")
+health = 0.0
+damage = 2.0
+metadata/_custom_type_script = "uid://cqenl4o4vuct3"

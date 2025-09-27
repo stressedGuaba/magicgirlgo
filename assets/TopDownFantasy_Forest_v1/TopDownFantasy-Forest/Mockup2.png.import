@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://diloot1cqm5k1"
-path="res://.godot/imported/temp enemy1.png-6e1c97b0298ce9ad8c2398ee77f603b5.ctex"
+uid="uid://dugduognxfsid"
+path="res://.godot/imported/Mockup2.png-08499dda159d0364bdc57ba8dc51c6dc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/temp enemy1.png"
-dest_files=["res://.godot/imported/temp enemy1.png-6e1c97b0298ce9ad8c2398ee77f603b5.ctex"]
+source_file="res://assets/TopDownFantasy_Forest_v1/TopDownFantasy-Forest/Mockup2.png"
+dest_files=["res://.godot/imported/Mockup2.png-08499dda159d0364bdc57ba8dc51c6dc.ctex"]
 
 [params]
 

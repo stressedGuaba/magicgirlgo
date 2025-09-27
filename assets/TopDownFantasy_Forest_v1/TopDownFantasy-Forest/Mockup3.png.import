@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c7d4g5thmbwjj"
-path="res://.godot/imported/godotwaka2.png-7d3d010fb4adc0d433467ab1cc4754ed.ctex"
+uid="uid://j1xge5efr2mm"
+path="res://.godot/imported/Mockup3.png-bcb14d477a796436f5ceec13b2851642.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/godotwaka2.png"
-dest_files=["res://.godot/imported/godotwaka2.png-7d3d010fb4adc0d433467ab1cc4754ed.ctex"]
+source_file="res://assets/TopDownFantasy_Forest_v1/TopDownFantasy-Forest/Mockup3.png"
+dest_files=["res://.godot/imported/Mockup3.png-bcb14d477a796436f5ceec13b2851642.ctex"]
 
 [params]
 

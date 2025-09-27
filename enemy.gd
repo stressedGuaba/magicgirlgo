@@ -1,17 +1,38 @@
 extends CharacterBody2D
 
-var health = 3
+@export var player_reference : CharacterBody2D
+var direction : Vector2
+var speed : float = 75
+var damage : float
+var knockback : Vector2
 
-@onready var player = get_node("/root/Game/Player")
+var elite : bool = false:
+	set(value):
+		elite = value
+		if value: 
+			$Sprite2D.material = load("res://Shaders/EnemyOutline.tres")
+			scale = Vector2(1.5,1.5)
 
-func _physics_process(_delta: float) -> void:
-	var direction = global_position.direction_to(player.global_position)
-	velocity = direction * 300.0
-	move_and_slide()
+var type : Enemy: 
+	set(value):
+		type = value
+		$Sprite2D.texture = value.texture
+		damage = value.damage
 
-func take_damage():
-	health -= 1
-	
-	if health == 0: 
+func _physics_process(delta: float) -> void:
+	var seperation = (player_reference.position - position).length()
+	if seperation >= 500 and not elite:
 		queue_free()
+		
+		
+	velocity = (player_reference.position - position).normalized() * speed
+	knockback = knockback.move_toward(Vector2.ZERO, 1) ## knockback decaying over time
+	velocity += knockback ## adding knockback to velocity
+	
+	
+	
+	var collider = move_and_collide(velocity * delta)
+	
+	if collider:
+		collider.get_collider().knockback = (collider.get_collider().global_position - global_position).normalized() * 50
 	

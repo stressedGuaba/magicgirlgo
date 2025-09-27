@@ -1,20 +1,26 @@
 extends CharacterBody2D
 
-signal health_depleted 
+var speed : float = 150
+var health : float = 100:
+	##make health a setter variable to update progress bar
+	set(value):
+		health = value
+		%Health.value = value
 
-var health = 100.0
+func _physics_process(delta: float) -> void:
+	velocity = Input.get_vector("move_left", "move_right", "move_up", "move_down") * speed
+	move_and_collide(velocity * delta)
+
+##function to reduce health	
+func take_damage(amount):
+	health -= amount
+	print(amount)
+
+func _on_self_damage_body_entered(body: Node2D) -> void:
+	take_damage(body.damage)
 
 
-func _physics_process(_delta: float) -> void:
-	var direction = Input.get_vector("move_left", "move_right", "move_up", "move_down")
-	velocity = direction * 600
-	move_and_slide()
-	
-	const DAMAGE_RATE = 5.0
-	var overlapping_mobs = %HurtBox.get_overlapping_bodies()
-	if overlapping_mobs.size() > 0:
-			health -= DAMAGE_RATE * overlapping_mobs.size() * _delta
-			%ProgressBar.value = health
-			%ProgressBar.max_value = 500
-			if health <= 0.0:
-				health_depleted.emit()
+func _on_timer_timeout() -> void:
+	## disable and enable with each timeout 
+	%Collision.set_deferred("disabled", true)
+	%Collision.set_deferred("disabled", false)
