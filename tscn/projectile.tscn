@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://ch5jhaipgeqdb"]
+[gd_scene load_steps=9 format=3 uid="uid://ch5jhaipgeqdb"]
 
 [ext_resource type="Script" uid="uid://djlk7pqrxlwys" path="res://Scripts/projectile.gd" id="1_msun3"]
 
@@ -8,7 +8,38 @@ size = Vector2(10, 10)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hsaer"]
 size = Vector2(10, 10)
 
+[sub_resource type="Gradient" id="Gradient_msun3"]
+offsets = PackedFloat32Array(0, 0.845455, 0.990909, 1)
+colors = PackedColorArray(1, 1, 1, 0.627451, 0.998663, 0.721536, 0.764439, 1, 0.99845, 0.6771, 0.72685, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_tw0d1"]
+gradient = SubResource("Gradient_msun3")
+
+[sub_resource type="Curve" id="Curve_hsaer"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_8ae8r"]
+curve = SubResource("Curve_hsaer")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_msun3"]
+particle_flag_disable_z = true
+emission_shape = 1
+emission_sphere_radius = 8.0
+initial_velocity_min = -10.0
+initial_velocity_max = 10.0
+gravity = Vector3(0, 0, 0)
+scale_min = 2.0
+scale_max = 3.0
+scale_curve = SubResource("CurveTexture_8ae8r")
+color_ramp = SubResource("GradientTexture1D_tw0d1")
+turbulence_enabled = true
+turbulence_noise_speed = Vector3(0, 1, 0)
+turbulence_influence_max = 0.253
+
 [node name="Projectile" type="Area2D"]
+collision_layer = 2
+collision_mask = 2
 script = ExtResource("1_msun3")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -18,6 +49,10 @@ texture = SubResource("PlaceholderTexture2D_tw0d1")
 shape = SubResource("RectangleShape2D_hsaer")
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+amount = 200
+process_material = SubResource("ParticleProcessMaterial_msun3")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_screen_exited"]

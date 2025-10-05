@@ -4,7 +4,7 @@ class_name SingleShot
 func shoot(source, target, scene_tree):
 	if target == null:
 		return 
-		
+	else:
 		var projectile = projectile_node.instantiate()
 		
 		projectile.position = source.position
@@ -13,7 +13,5 @@ func shoot(source, target, scene_tree):
 		projectile.direction = (target.position - source.position).normalized()
 		
 		scene_tree.current_scene.add_child(projectile)
-	
 func activate(source, target, scene_tree): 
 	shoot(source, target, scene_tree)
-	
