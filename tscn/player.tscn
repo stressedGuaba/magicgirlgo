@@ -1,8 +1,12 @@
-[gd_scene load_steps=7 format=3 uid="uid://dypdpbah2np48"]
+[gd_scene load_steps=12 format=3 uid="uid://dypdpbah2np48"]
 
 [ext_resource type="Script" uid="uid://liojv5m13c2s" path="res://Scripts/player.gd" id="1_3eola"]
 [ext_resource type="PackedScene" uid="uid://muyl5fbusft4" path="res://tscn/slot.tscn" id="2_3c7ea"]
 [ext_resource type="Resource" uid="uid://eovbkwcej6i1" path="res://Resources/Weapons/Magic Wand.tres" id="3_u4c7w"]
+[ext_resource type="Texture2D" uid="uid://c4ah5tb45h6tm" path="res://temp assets/Under.png" id="4_hsluc"]
+[ext_resource type="Texture2D" uid="uid://b4xuxxla2ku1w" path="res://temp assets/Over.png" id="5_1q7bi"]
+[ext_resource type="Texture2D" uid="uid://b2ems1u7svq7o" path="res://temp assets/Progress.png" id="6_ne3il"]
+[ext_resource type="Script" uid="uid://bj8f6lg30wklr" path="res://tscn/options.gd" id="7_1q7bi"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_0bb2n"]
 size = Vector2(20, 20)
@@ -10,6 +14,9 @@ size = Vector2(20, 20)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_duskh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3eola"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hsluc"]
+radius = 50.0
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_3eola")
@@ -29,6 +36,40 @@ layout_mode = 2
 
 [node name="Slot3" parent="UI/Weapons" instance=ExtResource("2_3c7ea")]
 layout_mode = 2
+
+[node name="XP" type="TextureProgressBar" parent="UI"]
+unique_name_in_owner = true
+offset_right = 1920.0
+offset_bottom = 1080.0
+max_value = 10.0
+texture_under = ExtResource("4_hsluc")
+texture_over = ExtResource("5_1q7bi")
+texture_progress = ExtResource("6_ne3il")
+
+[node name="Level" type="Label" parent="UI/XP"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 1067.0
+offset_top = 39.0
+offset_right = 1107.0
+offset_bottom = 88.0
+text = "Lv 1
+"
+
+[node name="Options" type="VBoxContainer" parent="UI"]
+unique_name_in_owner = true
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("7_1q7bi")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = SubResource("PlaceholderTexture2D_0bb2n")
@@ -58,5 +99,14 @@ autostart = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
+[node name="Magnet" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Magnet"]
+shape = SubResource("CircleShape2D_hsluc")
+disabled = true
+
 [connection signal="body_entered" from="SelfDamage" to="." method="_on_self_damage_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="area_entered" from="Magnet" to="." method="_on_magnet_area_entered"]

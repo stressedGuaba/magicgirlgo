@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://b5y7fms47otl4"]
 
-[ext_resource type="Script" uid="uid://xeoswdya0x4f" path="res://damage.gd" id="1_0t240"]
+[ext_resource type="Script" uid="uid://xeoswdya0x4f" path="res://Scripts/damage.gd" id="1_0t240"]
 
 [node name="Damage" type="Label"]
 offset_left = -50.0

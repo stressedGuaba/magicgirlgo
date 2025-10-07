@@ -1,7 +1,9 @@
-[gd_resource type="Resource" script_class="Enemy" load_steps=3 format=3 uid="uid://druj5ifxx62yd"]
+[gd_resource type="Resource" script_class="Enemy" load_steps=5 format=3 uid="uid://druj5ifxx62yd"]
 
+[ext_resource type="Script" uid="uid://digfy03aroju7" path="res://tscn/PickupResources.gd" id="1_hjpw4"]
 [ext_resource type="Script" uid="uid://cqenl4o4vuct3" path="res://Scripts/EnemyType.gd" id="1_iocv8"]
 [ext_resource type="Texture2D" uid="uid://bwjid6b4caiqq" path="res://temp assets/temp enemy5.png" id="2_3oamo"]
+[ext_resource type="Resource" uid="uid://by3aowld0d710" path="res://Resources/Pickups/Green Gem.tres" id="2_cw6ay"]
 
 [resource]
 script = ExtResource("1_iocv8")
@@ -9,4 +11,5 @@ title = "Enemy5"
 texture = ExtResource("2_3oamo")
 health = 3.0
 damage = 5.0
+drops = Array[ExtResource("1_hjpw4")]([ExtResource("2_cw6ay")])
 metadata/_custom_type_script = "uid://cqenl4o4vuct3"
