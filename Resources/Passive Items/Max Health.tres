@@ -1,0 +1,51 @@
+[gd_resource type="Resource" script_class="PassiveItem" load_steps=7 format=3 uid="uid://bul87kwod6s5m"]
+
+[ext_resource type="Script" uid="uid://vnfhdewgm8ig" path="res://PassiveItem.gd" id="1_a6qfx"]
+[ext_resource type="Texture2D" uid="uid://1nl4s5kg6ixj" path="res://temp assets/temp health.png" id="2_dx06i"]
+[ext_resource type="Script" uid="uid://chcop36wk1p6" path="res://tscn/Stats.gd" id="3_drm4t"]
+
+[sub_resource type="Resource" id="Resource_qvlsl"]
+script = ExtResource("3_drm4t")
+description = "+ 20 Health"
+max_health = 20.0
+recovery = 0.0
+armor = 0.0
+movement_speed = 0.0
+might = 0.0
+area = 0.0
+magnet = 0.0
+growth = 0.0
+metadata/_custom_type_script = "uid://chcop36wk1p6"
+
+[sub_resource type="Resource" id="Resource_4s5xf"]
+script = ExtResource("3_drm4t")
+description = "+ 25 Health"
+max_health = 25.0
+recovery = 0.0
+armor = 0.0
+movement_speed = 0.0
+might = 0.0
+area = 0.0
+magnet = 0.0
+growth = 0.0
+metadata/_custom_type_script = "uid://chcop36wk1p6"
+
+[sub_resource type="Resource" id="Resource_usood"]
+script = ExtResource("3_drm4t")
+description = "+ 30 Health"
+max_health = 30.0
+recovery = 0.0
+armor = 0.0
+movement_speed = 0.0
+might = 0.0
+area = 0.0
+magnet = 0.0
+growth = 0.0
+metadata/_custom_type_script = "uid://chcop36wk1p6"
+
+[resource]
+script = ExtResource("1_a6qfx")
+upgrades = Array[ExtResource("3_drm4t")]([SubResource("Resource_qvlsl"), SubResource("Resource_4s5xf"), SubResource("Resource_usood")])
+title = "Max Health"
+texture = ExtResource("2_dx06i")
+metadata/_custom_type_script = "uid://vnfhdewgm8ig"

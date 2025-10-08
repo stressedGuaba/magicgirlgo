@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://dypdpbah2np48"]
+[gd_scene load_steps=18 format=3 uid="uid://dypdpbah2np48"]
 
 [ext_resource type="Script" uid="uid://liojv5m13c2s" path="res://Scripts/player.gd" id="1_3eola"]
 [ext_resource type="PackedScene" uid="uid://muyl5fbusft4" path="res://tscn/slot.tscn" id="2_3c7ea"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://w6fxa05gmc2g" path="res://temp assets/temp panel.png" id="3_wxvsy"]
 [ext_resource type="Texture2D" uid="uid://c4ah5tb45h6tm" path="res://temp assets/Under.png" id="4_hsluc"]
 [ext_resource type="Texture2D" uid="uid://b4xuxxla2ku1w" path="res://temp assets/Over.png" id="5_1q7bi"]
+[ext_resource type="PackedScene" uid="uid://odlo86cvmg1e" path="res://tscn/passive_slot.tscn" id="5_kai0q"]
 [ext_resource type="Texture2D" uid="uid://b2ems1u7svq7o" path="res://temp assets/Progress.png" id="6_ne3il"]
 [ext_resource type="Script" uid="uid://bj8f6lg30wklr" path="res://Scripts/options.gd" id="7_1q7bi"]
 
@@ -44,6 +45,7 @@ script = ExtResource("1_3eola")
 
 [node name="Particle" type="GPUParticles2D" parent="UI"]
 process_mode = 3
+visible = false
 position = Vector2(664, 3)
 amount = 80
 texture = ExtResource("2_kai0q")
@@ -73,12 +75,26 @@ offset_bottom = 40.0
 
 [node name="Slot" parent="UI/Weapons" instance=ExtResource("2_3c7ea")]
 layout_mode = 2
-weapon = ExtResource("3_u4c7w")
+item = ExtResource("3_u4c7w")
 
 [node name="Slot2" parent="UI/Weapons" instance=ExtResource("2_3c7ea")]
 layout_mode = 2
 
 [node name="Slot3" parent="UI/Weapons" instance=ExtResource("2_3c7ea")]
+layout_mode = 2
+
+[node name="PassiveItems" type="HBoxContainer" parent="UI"]
+offset_top = 51.0
+offset_right = 128.0
+offset_bottom = 91.0
+
+[node name="PassiveSlot" parent="UI/PassiveItems" instance=ExtResource("5_kai0q")]
+layout_mode = 2
+
+[node name="PassiveSlot2" parent="UI/PassiveItems" instance=ExtResource("5_kai0q")]
+layout_mode = 2
+
+[node name="PassiveSlot3" parent="UI/PassiveItems" instance=ExtResource("5_kai0q")]
 layout_mode = 2
 
 [node name="XP" type="TextureProgressBar" parent="UI"]
@@ -102,7 +118,7 @@ offset_bottom = 88.0
 text = "Lv 1
 "
 
-[node name="Options" type="VBoxContainer" parent="UI" node_paths=PackedStringArray("weapons", "particles", "panel")]
+[node name="Options" type="VBoxContainer" parent="UI" node_paths=PackedStringArray("weapons", "passive_items", "particles", "panel")]
 unique_name_in_owner = true
 process_mode = 3
 anchors_preset = 8
@@ -118,6 +134,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("7_1q7bi")
 weapons = NodePath("../Weapons")
+passive_items = NodePath("../PassiveItems")
 particles = NodePath("../Particle")
 panel = NodePath("../Panel")
 
@@ -153,7 +170,8 @@ autostart = true
 collision_layer = 0
 collision_mask = 4
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Magnet"]
+[node name="Magnet" type="CollisionShape2D" parent="Magnet"]
+unique_name_in_owner = true
 shape = SubResource("CircleShape2D_hsluc")
 disabled = true
 

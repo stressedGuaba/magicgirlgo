@@ -1,0 +1,51 @@
+[gd_resource type="Resource" script_class="PassiveItem" load_steps=7 format=3 uid="uid://d2ig7mxek5enn"]
+
+[ext_resource type="Script" uid="uid://vnfhdewgm8ig" path="res://PassiveItem.gd" id="1_fg5g0"]
+[ext_resource type="Texture2D" uid="uid://bi2nyrc0irda1" path="res://temp assets/temp movement speed.png" id="2_kjcaa"]
+[ext_resource type="Script" uid="uid://chcop36wk1p6" path="res://tscn/Stats.gd" id="3_f4b77"]
+
+[sub_resource type="Resource" id="Resource_150im"]
+script = ExtResource("3_f4b77")
+description = "+ 15 Movement Speed"
+max_health = 0.0
+recovery = 0.0
+armor = 0.0
+movement_speed = 15.0
+might = 0.0
+area = 0.0
+magnet = 0.0
+growth = 0.0
+metadata/_custom_type_script = "uid://chcop36wk1p6"
+
+[sub_resource type="Resource" id="Resource_hlowd"]
+script = ExtResource("3_f4b77")
+description = "+ 20 Movement Speed"
+max_health = 0.0
+recovery = 0.0
+armor = 0.0
+movement_speed = 20.0
+might = 0.0
+area = 0.0
+magnet = 0.0
+growth = 0.0
+metadata/_custom_type_script = "uid://chcop36wk1p6"
+
+[sub_resource type="Resource" id="Resource_wvix1"]
+script = ExtResource("3_f4b77")
+description = "+ 30 Movement Speed"
+max_health = 0.0
+recovery = 0.0
+armor = 0.0
+movement_speed = 30.0
+might = 0.0
+area = 0.0
+magnet = 0.0
+growth = 0.0
+metadata/_custom_type_script = "uid://chcop36wk1p6"
+
+[resource]
+script = ExtResource("1_fg5g0")
+upgrades = Array[ExtResource("3_f4b77")]([SubResource("Resource_150im"), SubResource("Resource_hlowd"), SubResource("Resource_wvix1")])
+title = "Movement Speed"
+texture = ExtResource("2_kjcaa")
+metadata/_custom_type_script = "uid://vnfhdewgm8ig"
