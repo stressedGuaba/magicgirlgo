@@ -1,6 +1,7 @@
-[gd_resource type="Resource" script_class="SingleShot" load_steps=12 format=3 uid="uid://eovbkwcej6i1"]
+[gd_resource type="Resource" script_class="SingleShot" load_steps=13 format=3 uid="uid://eovbkwcej6i1"]
 
-[ext_resource type="Resource" uid="uid://bt2egld6lwbhe" path="res://Resources/Weapons/Holy Wand.tres" id="1_6uqvf"]
+[ext_resource type="Resource" uid="uid://8vju6mctx4g3" path="res://Resources/Weapons/Holy Wand 2.tres" id="1_pckyg"]
+[ext_resource type="PackedScene" uid="uid://ch5jhaipgeqdb" path="res://tscn/projectile.tscn" id="1_y3qg2"]
 [ext_resource type="Script" uid="uid://b8xpcl2r2wmx4" path="res://Scripts/SingleShot.gd" id="2_86g81"]
 [ext_resource type="Resource" uid="uid://bve2r2vg3ftgh" path="res://Resources/Passive Items/Magnet.tres" id="2_pckyg"]
 [ext_resource type="Texture2D" uid="uid://bhrwuxmoiwfyy" path="res://temp assets/temp magic wand.png" id="3_lctqv"]
@@ -12,7 +13,7 @@ script = ExtResource("5_6uqvf")
 speed = 0.0
 damage = 1.0
 cooldown = 0.0
-description = "+ 1 damage"
+description = "+1 Damage"
 metadata/_custom_type_script = "uid://deqti2bs2gv7u"
 
 [sub_resource type="Resource" id="Resource_kk7dj"]
@@ -20,7 +21,7 @@ script = ExtResource("5_6uqvf")
 speed = 0.0
 damage = 0.0
 cooldown = -0.2
-description = "-0.2s cool down"
+description = "-0.2 Cooldown"
 metadata/_custom_type_script = "uid://deqti2bs2gv7u"
 
 [sub_resource type="Resource" id="Resource_emurs"]
@@ -28,7 +29,7 @@ script = ExtResource("5_6uqvf")
 speed = 200.0
 damage = 0.0
 cooldown = 0.0
-description = "+ 200 speed"
+description = "+200 Speed"
 metadata/_custom_type_script = "uid://deqti2bs2gv7u"
 
 [sub_resource type="Resource" id="Resource_j6cq0"]
@@ -36,25 +37,27 @@ script = ExtResource("5_6uqvf")
 speed = 0.0
 damage = 2.0
 cooldown = 0.0
-description = "+ 2 damage"
+description = "+ 2 Damage
+"
 metadata/_custom_type_script = "uid://deqti2bs2gv7u"
 
-[sub_resource type="Resource" id="Resource_lctqv"]
+[sub_resource type="Resource" id="Resource_0kopa"]
 script = ExtResource("5_6uqvf")
 speed = 0.0
 damage = 0.0
-cooldown = 0.0
-description = ""
+cooldown = -0.2
+description = "-0.2 Cooldown"
 metadata/_custom_type_script = "uid://deqti2bs2gv7u"
 
 [resource]
 script = ExtResource("2_86g81")
 damage = 1.0
-cooldown = 0.75
-speed = 400.0
-upgrades = Array[ExtResource("4_lctqv")]([SubResource("Resource_pckyg"), SubResource("Resource_kk7dj"), SubResource("Resource_emurs"), SubResource("Resource_j6cq0"), SubResource("Resource_lctqv")])
+cooldown = 1.0
+speed = 200.0
+projectile_node = ExtResource("1_y3qg2")
+upgrades = Array[ExtResource("4_lctqv")]([SubResource("Resource_pckyg"), SubResource("Resource_kk7dj"), SubResource("Resource_emurs"), SubResource("Resource_j6cq0"), SubResource("Resource_0kopa")])
 item_needed = ExtResource("2_pckyg")
-evolution = ExtResource("1_6uqvf")
+evolution = ExtResource("1_pckyg")
 title = "Magic Wand"
 texture = ExtResource("3_lctqv")
 metadata/_custom_type_script = "uid://b8xpcl2r2wmx4"

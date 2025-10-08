@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://dypdpbah2np48"]
+[gd_scene load_steps=19 format=3 uid="uid://dypdpbah2np48"]
 
 [ext_resource type="Script" uid="uid://liojv5m13c2s" path="res://Scripts/player.gd" id="1_3eola"]
 [ext_resource type="PackedScene" uid="uid://muyl5fbusft4" path="res://tscn/slot.tscn" id="2_3c7ea"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://odlo86cvmg1e" path="res://tscn/passive_slot.tscn" id="5_kai0q"]
 [ext_resource type="Texture2D" uid="uid://b2ems1u7svq7o" path="res://temp assets/Progress.png" id="6_ne3il"]
 [ext_resource type="Script" uid="uid://bj8f6lg30wklr" path="res://Scripts/options.gd" id="7_1q7bi"]
+[ext_resource type="Resource" uid="uid://bve2r2vg3ftgh" path="res://Resources/Passive Items/Magnet.tres" id="7_nhqjh"]
 
 [sub_resource type="Gradient" id="Gradient_nhqjh"]
 offsets = PackedFloat32Array(0, 0.690909, 1)
@@ -90,6 +91,7 @@ offset_bottom = 91.0
 
 [node name="PassiveSlot" parent="UI/PassiveItems" instance=ExtResource("5_kai0q")]
 layout_mode = 2
+item = ExtResource("7_nhqjh")
 
 [node name="PassiveSlot2" parent="UI/PassiveItems" instance=ExtResource("5_kai0q")]
 layout_mode = 2
@@ -111,10 +113,10 @@ texture_progress = ExtResource("6_ne3il")
 [node name="Level" type="Label" parent="UI/XP"]
 unique_name_in_owner = true
 layout_mode = 0
-offset_left = 1067.0
-offset_top = 39.0
-offset_right = 1107.0
-offset_bottom = 88.0
+offset_left = 1453.0
+offset_top = 95.0
+offset_right = 1493.0
+offset_bottom = 144.0
 text = "Lv 1
 "
 

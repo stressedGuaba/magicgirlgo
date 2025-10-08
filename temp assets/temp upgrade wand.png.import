@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b2gmfvy85qtjs"
-path="res://.godot/imported/temp holy wand.png-dc76aedfca9991ac67243ac6909e24da.ctex"
+path="res://.godot/imported/temp upgrade wand.png-d1bc85423b70121b982e5816f9863dc7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://temp assets/temp holy wand.png"
-dest_files=["res://.godot/imported/temp holy wand.png-dc76aedfca9991ac67243ac6909e24da.ctex"]
+source_file="res://temp assets/temp upgrade wand.png"
+dest_files=["res://.godot/imported/temp upgrade wand.png-d1bc85423b70121b982e5816f9863dc7.ctex"]
 
 [params]
 

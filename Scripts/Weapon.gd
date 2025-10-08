@@ -33,6 +33,6 @@ func upgrade_item():
 
 func max_level_reached():
 	## check if item reached its max level
-	if upgrades.size() + 1 == level and upgrades.size() != 0:
+	if upgrades.size() +1 == level and upgrades.size() != 0:
 		return true
 	return false
