@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Chest" load_steps=3 format=3 uid="uid://cmkdumag80txw"]
+
+[ext_resource type="Texture2D" uid="uid://cdk0rewwbq77m" path="res://temp assets/temp chest.png" id="1_om8pj"]
+[ext_resource type="Script" uid="uid://78xjsdybixkc" path="res://ChestResource.gd" id="2_yjyg6"]
+
+[resource]
+script = ExtResource("2_yjyg6")
+title = "Boss Chest"
+icon = ExtResource("1_om8pj")
+description = ""
+metadata/_custom_type_script = "uid://78xjsdybixkc"
