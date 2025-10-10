@@ -9,6 +9,11 @@ extends PanelContainer
 		item.slot = self
 		
 
+func _physics_process(delta): 
+	if item != null and item.has_method("update"): 
+		item.update(delta)
+		
+
 func _on_cooldown_timeout():
 	## with each timeout, call activate from weapon
 	if item:
