@@ -1,13 +1,15 @@
-[gd_resource type="Resource" script_class="Gem" load_steps=3 format=3 uid="uid://dq7edxjnj2iww"]
+[gd_resource type="Resource" script_class="Gem" load_steps=4 format=3 uid="uid://dq7edxjnj2iww"]
 
-[ext_resource type="Texture2D" uid="uid://bdqe2be8fi37k" path="res://temp assets/temp blue gem.png" id="1_nevim"]
+[ext_resource type="Texture2D" uid="uid://bdqe2be8fi37k" path="res://temp assets/temp art/temp blue gem.png" id="1_tmmxm"]
 [ext_resource type="Script" uid="uid://cau17ejuxibda" path="res://Scripts/Gem.gd" id="2_tmmxm"]
+[ext_resource type="AudioStream" uid="uid://2276yah3kclp" path="res://temp assets/sound effects/Minecraft ITEM PLOP Sound Effect (Item Pickup_Drop).mp3" id="3_ygkte"]
 
 [resource]
 script = ExtResource("2_tmmxm")
 XP = 1.0
 title = "Blue Gem"
-icon = ExtResource("1_nevim")
+icon = ExtResource("1_tmmxm")
 description = "Gains Experience Points
 "
+sound = ExtResource("3_ygkte")
 metadata/_custom_type_script = "uid://cau17ejuxibda"

@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=4 uid="uid://qr5gi0nc7qj"]
+[gd_scene load_steps=10 format=4 uid="uid://qr5gi0nc7qj"]
 
 [ext_resource type="Texture2D" uid="uid://clnif4j2n25ea" path="res://temp assets/TopDownFantasy_Forest_v1/TopDownFantasy-Forest/Tiles/Tileset.png" id="1_tvnlp"]
 [ext_resource type="Texture2D" uid="uid://drel6dd3shics" path="res://temp assets/TopDownFantasy_Forest_v1/TopDownFantasy-Forest/Decorations/Decorations.png" id="2_7ofy1"]
 [ext_resource type="PackedScene" uid="uid://sfhsts2otlix" path="res://tscn/spawner.tscn" id="3_hjv2w"]
 [ext_resource type="PackedScene" uid="uid://dypdpbah2np48" path="res://tscn/player.tscn" id="4_x81v8"]
+[ext_resource type="PackedScene" uid="uid://dvpf71k4t3nht" path="res://tscn/destructible.tscn" id="5_7ofy1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lhj0b"]
 texture = ExtResource("1_tvnlp")
@@ -332,4 +333,11 @@ tile_set = SubResource("TileSet_2qreu")
 player = NodePath("../Player")
 
 [node name="Player" parent="." instance=ExtResource("4_x81v8")]
-position = Vector2(659, 362)
+position = Vector2(641, 376)
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
+color = Color(0.606472, 0.523391, 0.970628, 1)
+blend_mode = 2
+
+[node name="Destructible" parent="." instance=ExtResource("5_7ofy1")]
+position = Vector2(1198, 350)

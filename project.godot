@@ -14,6 +14,10 @@ config/name="magic girl go"
 run/main_scene="uid://qr5gi0nc7qj"
 config/features=PackedStringArray("4.4", "Forward Plus")
 
+[autoload]
+
+SoundManager="*res://tscn/sound_manager.tscn"
+
 [display]
 
 window/size/viewport_width=1280

@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://ch5jhaipgeqdb" path="res://tscn/projectile.tscn" id="1_ocu4e"]
 [ext_resource type="Script" uid="uid://ymqdfq7oicau" path="res://Scripts/Weapon.gd" id="2_nijtq"]
-[ext_resource type="Texture2D" uid="uid://b2gmfvy85qtjs" path="res://temp assets/temp upgrade wand.png" id="3_ocu4e"]
+[ext_resource type="Texture2D" uid="uid://b2gmfvy85qtjs" path="res://temp assets/temp art/temp upgrade wand.png" id="3_ocu4e"]
 [ext_resource type="Script" uid="uid://wyyxc0g71cnl" path="res://Scripts/Upgrade.gd" id="4_8x4l5"]
 
 [resource]

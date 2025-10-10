@@ -23,3 +23,8 @@ func _on_body_entered(body: Node2D):
 func _on_screen_exited():
 	queue_free()
 	
+
+
+func _on_area_entered(area: Area2D) -> void:
+	if area.get_parent().has_method("take_damage"):
+		area.get_parent().take_damage(damage)

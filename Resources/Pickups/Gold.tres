@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Gold" load_steps=4 format=3 uid="uid://cyjqhjov84bh3"]
+
+[ext_resource type="Texture2D" uid="uid://c1226etvilemh" path="res://temp assets/temp art/temp gold.png" id="1_oo1lb"]
+[ext_resource type="Script" uid="uid://cu50lf3njb23t" path="res://Scripts/Gold.gd" id="2_2n168"]
+[ext_resource type="AudioStream" uid="uid://2276yah3kclp" path="res://temp assets/sound effects/Minecraft ITEM PLOP Sound Effect (Item Pickup_Drop).mp3" id="3_r7p4r"]
+
+[resource]
+script = ExtResource("2_2n168")
+gold = 5
+title = "Gold"
+icon = ExtResource("1_oo1lb")
+description = "+5 Gold"
+sound = ExtResource("3_r7p4r")
+metadata/_custom_type_script = "uid://cu50lf3njb23t"

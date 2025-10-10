@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://bf71xh2ifs31d"]
 
 [ext_resource type="Script" uid="uid://co6a8hnfrnful" path="res://Scripts/enemy.gd" id="1_m7vtn"]
-[ext_resource type="Texture2D" uid="uid://diloot1cqm5k1" path="res://temp assets/temp enemy1.png" id="2_6c4pm"]
+[ext_resource type="Texture2D" uid="uid://diloot1cqm5k1" path="res://temp assets/temp art/temp enemy1.png" id="2_6c4pm"]
 
 [sub_resource type="Shader" id="Shader_th514"]
 code = "shader_type canvas_item;

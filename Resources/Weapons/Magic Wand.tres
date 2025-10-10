@@ -1,12 +1,13 @@
-[gd_resource type="Resource" script_class="SingleShot" load_steps=13 format=3 uid="uid://eovbkwcej6i1"]
+[gd_resource type="Resource" script_class="SingleShot" load_steps=14 format=3 uid="uid://eovbkwcej6i1"]
 
 [ext_resource type="Resource" uid="uid://8vju6mctx4g3" path="res://Resources/Weapons/Holy Wand 2.tres" id="1_pckyg"]
 [ext_resource type="PackedScene" uid="uid://ch5jhaipgeqdb" path="res://tscn/projectile.tscn" id="1_y3qg2"]
 [ext_resource type="Script" uid="uid://b8xpcl2r2wmx4" path="res://Scripts/SingleShot.gd" id="2_86g81"]
 [ext_resource type="Resource" uid="uid://bve2r2vg3ftgh" path="res://Resources/Passive Items/Magnet.tres" id="2_pckyg"]
-[ext_resource type="Texture2D" uid="uid://bhrwuxmoiwfyy" path="res://temp assets/temp magic wand.png" id="3_lctqv"]
 [ext_resource type="Script" uid="uid://wyyxc0g71cnl" path="res://Scripts/Upgrade.gd" id="4_lctqv"]
 [ext_resource type="Script" uid="uid://deqti2bs2gv7u" path="res://Scripts/ProjectileUpgrade.gd" id="5_6uqvf"]
+[ext_resource type="AudioStream" uid="uid://btar4b7d32f1l" path="res://temp assets/sound effects/Ding - Sound Effect.mp3" id="5_kk7dj"]
+[ext_resource type="Texture2D" uid="uid://bhrwuxmoiwfyy" path="res://temp assets/temp art/temp magic wand.png" id="6_emurs"]
 
 [sub_resource type="Resource" id="Resource_pckyg"]
 script = ExtResource("5_6uqvf")
@@ -58,6 +59,7 @@ projectile_node = ExtResource("1_y3qg2")
 upgrades = Array[ExtResource("4_lctqv")]([SubResource("Resource_pckyg"), SubResource("Resource_kk7dj"), SubResource("Resource_emurs"), SubResource("Resource_j6cq0"), SubResource("Resource_0kopa")])
 item_needed = ExtResource("2_pckyg")
 evolution = ExtResource("1_pckyg")
+sound = ExtResource("5_kk7dj")
 title = "Magic Wand"
-texture = ExtResource("3_lctqv")
+texture = ExtResource("6_emurs")
 metadata/_custom_type_script = "uid://b8xpcl2r2wmx4"

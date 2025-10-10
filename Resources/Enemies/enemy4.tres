@@ -1,8 +1,8 @@
 [gd_resource type="Resource" script_class="Enemy" load_steps=5 format=3 uid="uid://dudifcn5tkoy3"]
 
 [ext_resource type="Script" uid="uid://cqenl4o4vuct3" path="res://Scripts/EnemyType.gd" id="1_rpa2a"]
-[ext_resource type="Script" uid="uid://digfy03aroju7" path="res://tscn/PickupResources.gd" id="1_wgsl8"]
-[ext_resource type="Texture2D" uid="uid://b2qeesojegsb6" path="res://temp assets/temp enemy4.png" id="2_7hsbi"]
+[ext_resource type="Script" uid="uid://digfy03aroju7" path="res://Scripts/PickupResources.gd" id="1_wgsl8"]
+[ext_resource type="Texture2D" uid="uid://b2qeesojegsb6" path="res://temp assets/temp art/temp enemy4.png" id="2_7hsbi"]
 [ext_resource type="Resource" uid="uid://by3aowld0d710" path="res://Resources/Pickups/Green Gem.tres" id="2_pt4kt"]
 
 [resource]

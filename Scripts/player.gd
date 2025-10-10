@@ -24,7 +24,7 @@ var growth : float = 1
 
 
 
-var nearest_enemy : CharacterBody2D
+var nearest_enemy
 var nearest_enemy_distance : float = 150 + area
 var knockback = 100
 

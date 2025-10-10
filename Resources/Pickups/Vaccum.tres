@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="PickupMagnet" load_steps=4 format=3 uid="uid://c1mowo0jnsp2t"]
+
+[ext_resource type="Texture2D" uid="uid://dbj06n4rbqtbl" path="res://temp assets/temp art/temp vacuum.png" id="1_amd1p"]
+[ext_resource type="Script" uid="uid://62pxl2eqtnn8" path="res://Scripts/Vaccum.gd" id="2_amd1p"]
+[ext_resource type="AudioStream" uid="uid://2276yah3kclp" path="res://temp assets/sound effects/Minecraft ITEM PLOP Sound Effect (Item Pickup_Drop).mp3" id="3_bbycc"]
+
+[resource]
+script = ExtResource("2_amd1p")
+title = "Vaccum"
+icon = ExtResource("1_amd1p")
+description = "Get all the gems !"
+sound = ExtResource("3_bbycc")
+metadata/_custom_type_script = "uid://62pxl2eqtnn8"

@@ -1,7 +1,41 @@
-[gd_scene format=3 uid="uid://dvpf71k4t3nht"]
+[gd_scene load_steps=11 format=3 uid="uid://dvpf71k4t3nht"]
+
+[ext_resource type="Texture2D" uid="uid://orl8pcwx3gkq" path="res://temp assets/temp art/temp destructible.png" id="1_s7bh4"]
+[ext_resource type="Script" uid="uid://xd3jpkweyvb3" path="res://Scripts/destructible.gd" id="2_edq7a"]
+[ext_resource type="Script" uid="uid://digfy03aroju7" path="res://Scripts/PickupResources.gd" id="3_pgtpf"]
+[ext_resource type="Resource" uid="uid://ce2wasmm62g1n" path="res://Resources/Pickups/Sandwich.tres" id="4_iwbnr"]
+[ext_resource type="Resource" uid="uid://cyjqhjov84bh3" path="res://Resources/Pickups/Gold.tres" id="4_pgtpf"]
+[ext_resource type="Resource" uid="uid://b6ts514gssbhy" path="res://Resources/Pickups/Death.tres" id="5_iwbnr"]
+[ext_resource type="Resource" uid="uid://c1mowo0jnsp2t" path="res://Resources/Pickups/Vaccum.tres" id="6_p7q67"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pgtpf"]
+radius = 25.0
+height = 172.0
+
+[sub_resource type="Gradient" id="Gradient_s7bh4"]
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_edq7a"]
+gradient = SubResource("Gradient_s7bh4")
+fill = 1
+fill_from = Vector2(0.487179, 0.457265)
+fill_to = Vector2(0.790598, 0.316239)
 
 [node name="Destructible" type="Sprite2D"]
+texture = ExtResource("1_s7bh4")
+script = ExtResource("2_edq7a")
+drops = Array[ExtResource("3_pgtpf")]([ExtResource("4_pgtpf"), ExtResource("5_iwbnr"), ExtResource("4_iwbnr"), ExtResource("6_p7q67")])
 
 [node name="Area2D" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-4, -10)
+shape = SubResource("CapsuleShape2D_pgtpf")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(-3.49998, -16.5)
+scale = Vector2(22.7656, 19.6719)
+color = Color(1, 0.731023, 0.917498, 1)
+texture = SubResource("GradientTexture2D_edq7a")

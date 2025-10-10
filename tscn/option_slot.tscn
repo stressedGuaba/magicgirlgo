@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://b56c60xifgd23"]
 
-[ext_resource type="Texture2D" uid="uid://bhrwuxmoiwfyy" path="res://temp assets/temp magic wand.png" id="1_d8dyp"]
+[ext_resource type="Texture2D" uid="uid://bhrwuxmoiwfyy" path="res://temp assets/temp art/temp magic wand.png" id="1_d8dyp"]
 [ext_resource type="Script" uid="uid://vkesixbsulcu" path="res://Scripts/option_slot.gd" id="2_j831q"]
-[ext_resource type="Texture2D" uid="uid://snbhrhtl2gts" path="res://temp assets/temp gui.png" id="2_qktew"]
+[ext_resource type="Texture2D" uid="uid://snbhrhtl2gts" path="res://temp assets/temp art/temp gui.png" id="2_qktew"]
 
 [node name="OptionSlot" type="TextureButton"]
 custom_minimum_size = Vector2(315, 40)
