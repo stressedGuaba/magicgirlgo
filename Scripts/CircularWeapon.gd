@@ -22,6 +22,7 @@ func add_to_player(source):
 	projectile.speed = 0 
 	projectile.damage = damage
 	projectile.source = source
+	projectile.find_child("Sprite2D").texture = texture
 	projectile.hide()
 	
 	projectile_reference.append(projectile)
@@ -41,3 +42,18 @@ func reset():
 	for i in range(projectile_reference.size()):
 		projectile_reference.pop_front().queue_free()
 		
+func upgrade_item():
+	if max_level_reached():
+		slot.item = evolution
+		return
+	
+	if not is_upgradable():
+		return
+	
+	var upgrade = upgrades[level - 1]
+	
+	angular_speed += upgrade.angular_speed
+	amount += upgrade.amount
+	damage += upgrade.damage
+	
+	level += 1

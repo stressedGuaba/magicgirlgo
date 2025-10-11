@@ -61,5 +61,6 @@ item_needed = ExtResource("2_pckyg")
 evolution = ExtResource("1_pckyg")
 sound = ExtResource("5_kk7dj")
 title = "Magic Wand"
+icon = ExtResource("6_emurs")
 texture = ExtResource("6_emurs")
 metadata/_custom_type_script = "uid://b8xpcl2r2wmx4"

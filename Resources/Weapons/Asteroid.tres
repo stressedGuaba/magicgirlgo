@@ -1,0 +1,71 @@
+[gd_resource type="Resource" script_class="Circular" load_steps=13 format=3 uid="uid://b7ae78shor01j"]
+
+[ext_resource type="PackedScene" uid="uid://ch5jhaipgeqdb" path="res://tscn/projectile.tscn" id="1_2e4yb"]
+[ext_resource type="Resource" uid="uid://djy2i5iksmm5c" path="res://Resources/Weapons/Huge Asteroid.tres" id="1_vejk4"]
+[ext_resource type="Resource" uid="uid://cq47stjny1nt5" path="res://Resources/Passive Items/Recovery.tres" id="3_1kn8f"]
+[ext_resource type="Script" uid="uid://bj2wdckdxp4xr" path="res://Scripts/CircularWeapon.gd" id="3_712fu"]
+[ext_resource type="Texture2D" uid="uid://c7t2ef4bdjv1i" path="res://temp assets/temp art/temp circular weapon.png" id="3_mj1a1"]
+[ext_resource type="Script" uid="uid://wyyxc0g71cnl" path="res://Scripts/Upgrade.gd" id="4_ei5iu"]
+[ext_resource type="Script" uid="uid://w4jfh361ng0c" path="res://Scripts/CircularUpgrade.gd" id="5_712fu"]
+
+[sub_resource type="Resource" id="Resource_w1m4l"]
+script = ExtResource("5_712fu")
+angular_speed = 0.0
+amount = 1
+damage = 0.0
+cooldown = 0.0
+description = "+1 Projectile"
+metadata/_custom_type_script = "uid://w4jfh361ng0c"
+
+[sub_resource type="Resource" id="Resource_vejk4"]
+script = ExtResource("5_712fu")
+angular_speed = 90.0
+amount = 0
+damage = 0.0
+cooldown = 0.0
+description = "+90 Speed"
+metadata/_custom_type_script = "uid://w4jfh361ng0c"
+
+[sub_resource type="Resource" id="Resource_1kn8f"]
+script = ExtResource("5_712fu")
+angular_speed = 0.0
+amount = 2
+damage = 0.0
+cooldown = 0.0
+description = "+2 Projectile"
+metadata/_custom_type_script = "uid://w4jfh361ng0c"
+
+[sub_resource type="Resource" id="Resource_dwg1a"]
+script = ExtResource("5_712fu")
+angular_speed = 0.0
+amount = 0
+damage = 3.0
+cooldown = 0.0
+description = "+3 Damage"
+metadata/_custom_type_script = "uid://w4jfh361ng0c"
+
+[sub_resource type="Resource" id="Resource_7ea48"]
+script = ExtResource("5_712fu")
+angular_speed = 0.0
+amount = 1
+damage = 0.0
+cooldown = 0.0
+description = "+1 Projectile"
+metadata/_custom_type_script = "uid://w4jfh361ng0c"
+
+[resource]
+script = ExtResource("3_712fu")
+angular_speed = 90
+radius = 100
+amount = 1
+damage = 1.0
+cooldown = 2.0
+speed = 0.0
+projectile_node = ExtResource("1_2e4yb")
+upgrades = Array[ExtResource("4_ei5iu")]([SubResource("Resource_w1m4l"), SubResource("Resource_vejk4"), SubResource("Resource_1kn8f"), SubResource("Resource_dwg1a"), SubResource("Resource_7ea48")])
+item_needed = ExtResource("3_1kn8f")
+evolution = ExtResource("1_vejk4")
+title = "Asteroid"
+icon = ExtResource("3_mj1a1")
+texture = ExtResource("3_mj1a1")
+metadata/_custom_type_script = "uid://bj2wdckdxp4xr"

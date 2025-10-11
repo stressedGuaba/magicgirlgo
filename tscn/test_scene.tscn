@@ -340,4 +340,4 @@ color = Color(0.606472, 0.523391, 0.970628, 1)
 blend_mode = 2
 
 [node name="Destructible" parent="." instance=ExtResource("5_7ofy1")]
-position = Vector2(1198, 350)
+position = Vector2(1156, 361)
