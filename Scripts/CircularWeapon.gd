@@ -27,7 +27,7 @@ func add_to_player(source):
 	
 	projectile_reference.append(projectile)
 	source.call_deferred("add_child", projectile)
-	
+
 func update(delta):
 	angle += angular_speed * delta
 	
@@ -36,12 +36,12 @@ func update(delta):
 		
 		projectile_reference[i].position = radius * Vector2(cos(deg_to_rad(angle + offset)), sin(deg_to_rad(angle+offset)))
 		projectile_reference[i].show()
-		
-		
+
+
 func reset():
 	for i in range(projectile_reference.size()):
 		projectile_reference.pop_front().queue_free()
-		
+
 func upgrade_item():
 	if max_level_reached():
 		slot.item = evolution

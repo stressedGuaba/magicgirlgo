@@ -18,6 +18,7 @@ config/features=PackedStringArray("4.4", "Forward Plus")
 
 SoundManager="*res://tscn/sound_manager.tscn"
 SaveData="*res://tscn/save_data.tscn"
+Persistence="*res://tscn/persistence.tscn"
 
 [display]
 

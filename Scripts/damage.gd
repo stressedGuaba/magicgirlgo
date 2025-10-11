@@ -9,5 +9,3 @@ func pop ():
 	tween.chain().tween_property(self, "scale", Vector2(1,1), 0.1)
 	await tween.finished
 	queue_free()
-	
-	

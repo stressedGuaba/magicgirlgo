@@ -28,4 +28,6 @@ func _on_pressed() -> void:
 	if skill.cost <= SaveData.gold and is_upgradable() and not enabled:
 		SaveData.gold -= skill.cost
 		enabled = true
-		SaveData.set_and_save()
+		get_parent().get_parent().set_skill_tree()
+		get_parent().get_parent().get_total_stats()
+		

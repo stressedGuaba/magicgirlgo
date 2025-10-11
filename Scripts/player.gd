@@ -6,15 +6,26 @@ var health : float = 100:
 	set(value):
 		health = max(value, 0)
 		%Health.value = value
+		if health <= 0:
+			get_tree().paused = true
 
 var movement_speed : float = 150
 var max_health : float = 100: 
 	set(value): 
 		max_health = value
 		%Health.max_value = value
-var recovery : float = 0
-var armor : float = 0
-var might : float = 1.5
+var recovery : float = 0:
+	set(value):
+		recovery = value
+		%Recovery.text = "Recovery: " + str(value)
+var armor : float = 0:
+	set(value):
+		armor = value
+		%Armor.text = "Armor: " + str(value)
+var might : float = 1.0:
+	set(value):
+		might = value
+		%Might.text = "Might: " + str(value)
 var area : float = 0
 var magnet : float = 0: 
 	set(value): 
@@ -51,6 +62,9 @@ var level : int = 1:
 		elif level >= 7: 
 			%XP.max_value = 40
 
+func _ready():
+	Persistence.gain_bonus_stats(self)
+
 
 func _physics_process(delta: float) -> void:
 	if is_instance_valid(nearest_enemy): 
@@ -67,7 +81,7 @@ func _physics_process(delta: float) -> void:
 
 ##function to reduce health	
 func take_damage(amount):
-	health -= max(amount - armor, 0)
+	health -= max(amount * (amount/(amount + armor)), 1)
 	print(amount)
 
 func _on_self_damage_body_entered(body: Node2D) -> void:
