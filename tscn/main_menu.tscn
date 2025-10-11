@@ -1,5 +1,6 @@
-[gd_scene load_steps=28 format=3 uid="uid://di5aejlmogt78"]
+[gd_scene load_steps=32 format=3 uid="uid://di5aejlmogt78"]
 
+[ext_resource type="Theme" uid="uid://bhkadhymvm133" path="res://Resources/Theme/ui_theme.tres" id="1_8ph3v"]
 [ext_resource type="PackedScene" uid="uid://ccm0ot6c2uw4j" path="res://tscn/upgrade.tscn" id="1_hpdlp"]
 [ext_resource type="Script" uid="uid://31grvmbetqlv" path="res://tscn/skill_tree.gd" id="1_p6scp"]
 [ext_resource type="Script" uid="uid://dybs4sdxgh08h" path="res://Scripts/Skill.gd" id="2_ymtcx"]
@@ -9,6 +10,9 @@
 [ext_resource type="Texture2D" uid="uid://csn1oopf1vb1w" path="res://temp assets/temp art/temp armor.png" id="6_gwonb"]
 [ext_resource type="Texture2D" uid="uid://bk16ws44btkrt" path="res://temp assets/temp art/temp recovery.png" id="7_mtscv"]
 [ext_resource type="Script" uid="uid://bu845l51e3i3l" path="res://tscn/start.gd" id="9_mtscv"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_56gxj"]
+bg_color = Color(0.959743, 0.849181, 0.881146, 1)
 
 [sub_resource type="Resource" id="Resource_p6scp"]
 script = ExtResource("3_cpdt8")
@@ -199,6 +203,12 @@ cost = 0
 stats = SubResource("Resource_t2h3p")
 metadata/_custom_type_script = "uid://dybs4sdxgh08h"
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v4ydv"]
+bg_color = Color(0.960784, 0.85098, 0.882353, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xs0r1"]
+bg_color = Color(0.960784, 0.85098, 0.882353, 1)
+
 [node name="MainMenu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -206,14 +216,17 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_8ph3v")
 
 [node name="SkillTree" type="Panel" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_56gxj")
 script = ExtResource("1_p6scp")
 
 [node name="Might" type="Control" parent="SkillTree"]
@@ -318,7 +331,129 @@ offset_right = 256.0
 offset_bottom = 448.0
 skill = SubResource("Resource_5w82d")
 
+[node name="Menu" type="Panel" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Start" type="Button" parent="Menu"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -56.0
+offset_top = -232.0
+offset_right = 60.0
+offset_bottom = -160.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 46
+text = "Start"
+script = ExtResource("9_mtscv")
+
+[node name="Upgrades" type="Button" parent="Menu"]
+layout_mode = 0
+offset_left = 920.0
+offset_top = 440.0
+offset_right = 1002.0
+offset_bottom = 471.0
+text = "Upgrades"
+
+[node name="Atlas" type="Button" parent="Menu"]
+layout_mode = 0
+offset_left = 280.0
+offset_top = 440.0
+offset_right = 327.0
+offset_bottom = 471.0
+text = "Atlas
+"
+
+[node name="Atlas" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Atlas"]
+custom_minimum_size = Vector2(250, 250)
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 88.0
+offset_top = -120.0
+offset_right = 338.0
+offset_bottom = 130.0
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_v4ydv")
+
+[node name="EnemyList" type="VBoxContainer" parent="Atlas/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Information" type="Panel" parent="Atlas"]
+custom_minimum_size = Vector2(250, 250)
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -312.0
+offset_top = -120.0
+offset_right = -62.0
+offset_bottom = 130.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_xs0r1")
+
+[node name="TextureRect" type="TextureRect" parent="Atlas/Information"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -45.0
+offset_top = 24.0
+offset_right = 35.0
+offset_bottom = 104.0
+grow_horizontal = 2
+expand_mode = 1
+
+[node name="Panel" type="Panel" parent="Atlas/Information/TextureRect"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Atlas/Information"]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 160.0
+offset_right = 72.0
+offset_bottom = 200.0
+
+[node name="Name" type="Label" parent="Atlas/Information/VBoxContainer"]
+layout_mode = 2
+text = "Name: "
+
+[node name="Damage" type="Label" parent="Atlas/Information/VBoxContainer"]
+layout_mode = 2
+text = "Damage:"
+
+[node name="Health" type="Label" parent="Atlas/Information/VBoxContainer"]
+layout_mode = 2
+text = "Health:"
+
 [node name="Gold" type="Label" parent="."]
+visible = false
 layout_mode = 0
 offset_left = 1056.0
 offset_top = 56.0
@@ -327,20 +462,20 @@ offset_bottom = 79.0
 horizontal_alignment = 2
 script = ExtResource("5_ra1sj")
 
-[node name="Start" type="Button" parent="."]
+[node name="Back" type="Button" parent="."]
+visible = false
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -23.0
-offset_top = -15.5
-offset_right = 23.0
-offset_bottom = 15.5
-grow_horizontal = 2
-grow_vertical = 2
-text = "Start"
-script = ExtResource("9_mtscv")
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -160.0
+offset_top = -128.0
+offset_right = -115.0
+offset_bottom = -97.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "Back"
 
-[connection signal="pressed" from="Start" to="Start" method="_on_pressed"]
+[connection signal="pressed" from="Menu/Start" to="Menu/Start" method="_on_pressed"]

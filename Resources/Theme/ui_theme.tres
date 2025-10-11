@@ -1,0 +1,41 @@
+[gd_resource type="Theme" load_steps=6 format=3 uid="uid://bhkadhymvm133"]
+
+[ext_resource type="FontFile" uid="uid://ce3e3gn8ogbvp" path="res://Resources/Theme/rainyhearts.ttf" id="1_5p18r"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t1yrm"]
+bg_color = Color(0.886275, 0.607843, 0.698039, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p3661"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.88676, 0.606757, 0.697559, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6r2yy"]
+bg_color = Color(0.886275, 0.607843, 0.698039, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_khdft"]
+bg_color = Color(0.940582, 0.758187, 0.799381, 1)
+
+[resource]
+default_font = ExtResource("1_5p18r")
+Button/colors/font_color = Color(0.886275, 0.607843, 0.698039, 1)
+Button/colors/font_hover_color = Color(0.95, 0.95, 0.95, 1)
+Button/styles/hover = SubResource("StyleBoxFlat_t1yrm")
+Button/styles/normal = SubResource("StyleBoxFlat_p3661")
+Button/styles/pressed = SubResource("StyleBoxFlat_6r2yy")
+Panel/styles/panel = SubResource("StyleBoxFlat_khdft")
