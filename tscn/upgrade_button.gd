@@ -7,14 +7,24 @@ var enabled : bool = false:
 		enabled = value
 		$Panel.show_behind_parent = value
 		
+		#if value: 
+			#$Outline.add_point(Vector2(0, -1))
+			#$Outline.add_point(Vector2(40, -1))
+			#$Outline.add_point(Vector2(40, 39))
+			#$Outline.add_point(Vector2(0, 39))
 		if value: 
+			$Outline.clear_points()
 			$Outline.add_point(Vector2(0, -1))
 			$Outline.add_point(Vector2(40, -1))
 			$Outline.add_point(Vector2(40, 39))
 			$Outline.add_point(Vector2(0, 39))
+			$Outline.add_point(Vector2(0, -1)) # close the shape
+		
 		if value and get_index() != 0:
+			$Connection.clear_points()
 			$Connection.add_point(Vector2(20, 20) + initial_modifier())
 			$Connection.add_point(get_parent().get_child(get_index() - 1).position - position + Vector2(20, 20) + final_modifier())
+	
 func _ready():
 	if skill:
 		texture_normal = skill.texture
