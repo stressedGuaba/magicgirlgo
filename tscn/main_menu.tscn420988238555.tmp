@@ -366,7 +366,6 @@ offset_bottom = 448.0
 skill = SubResource("Resource_5w82d")
 
 [node name="Menu" type="Panel" parent="."]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -408,7 +407,8 @@ offset_right = 334.0
 offset_bottom = 471.0
 text = "Archive"
 
-[node name="Archive" type="Panel" parent="."]
+[node name="Atlas" type="Panel" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -417,7 +417,7 @@ grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(510, 360)
 
-[node name="ScrollContainer" type="ScrollContainer" parent="Archive"]
+[node name="ScrollContainer" type="ScrollContainer" parent="Atlas"]
 custom_minimum_size = Vector2(500, 500)
 layout_mode = 1
 anchors_preset = 4
@@ -430,12 +430,12 @@ offset_bottom = 130.0
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_v4ydv")
 
-[node name="EnemyList" type="VBoxContainer" parent="Archive/ScrollContainer"]
+[node name="EnemyList" type="VBoxContainer" parent="Atlas/ScrollContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 script = ExtResource("11_v4ydv")
 
-[node name="Information" type="Panel" parent="Archive"]
+[node name="Information" type="Panel" parent="Atlas"]
 custom_minimum_size = Vector2(500, 500)
 layout_mode = 1
 anchors_preset = 6
@@ -451,8 +451,7 @@ grow_horizontal = 0
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_xs0r1")
 
-[node name="Texture" type="TextureRect" parent="Archive/Information"]
-unique_name_in_owner = true
+[node name="TextureRect" type="TextureRect" parent="Atlas/Information"]
 custom_minimum_size = Vector2(80, 80)
 layout_mode = 1
 anchors_preset = 5
@@ -465,7 +464,7 @@ offset_bottom = 104.0
 grow_horizontal = 2
 expand_mode = 1
 
-[node name="Panel" type="Panel" parent="Archive/Information/Texture"]
+[node name="Panel" type="Panel" parent="Atlas/Information/TextureRect"]
 show_behind_parent = true
 custom_minimum_size = Vector2(200, 200)
 layout_mode = 1
@@ -478,31 +477,28 @@ offset_bottom = 200.0
 grow_horizontal = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_8ph3v")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Archive/Information"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Atlas/Information"]
 layout_mode = 0
 offset_left = 42.0
 offset_top = 261.0
 offset_right = 93.0
 offset_bottom = 314.0
 
-[node name="Name" type="Label" parent="Archive/Information/VBoxContainer"]
-unique_name_in_owner = true
+[node name="Name" type="Label" parent="Atlas/Information/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_outline_color = Color(0.886275, 0.607843, 0.698039, 1)
 theme_override_constants/outline_size = 7
 theme_override_font_sizes/font_size = 50
 text = "Name: "
 
-[node name="Damage" type="Label" parent="Archive/Information/VBoxContainer"]
-unique_name_in_owner = true
+[node name="Damage" type="Label" parent="Atlas/Information/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_outline_color = Color(0.886275, 0.607843, 0.698039, 1)
 theme_override_constants/outline_size = 7
 theme_override_font_sizes/font_size = 50
 text = "Damage:"
 
-[node name="Health" type="Label" parent="Archive/Information/VBoxContainer"]
-unique_name_in_owner = true
+[node name="Health" type="Label" parent="Atlas/Information/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_outline_color = Color(0.886275, 0.607843, 0.698039, 1)
 theme_override_constants/outline_size = 7
@@ -510,14 +506,12 @@ theme_override_font_sizes/font_size = 50
 text = "Health:"
 
 [node name="Gold" type="Label" parent="."]
+visible = false
 layout_mode = 0
 offset_left = 1056.0
 offset_top = 56.0
 offset_right = 1232.0
 offset_bottom = 79.0
-theme_override_colors/font_outline_color = Color(0.886275, 0.607843, 0.698039, 1)
-theme_override_constants/outline_size = 8
-theme_override_font_sizes/font_size = 40
 horizontal_alignment = 2
 script = ExtResource("5_ra1sj")
 

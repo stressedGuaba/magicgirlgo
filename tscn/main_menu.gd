@@ -7,12 +7,12 @@ func _on_upgrades_pressed() -> void:
 	skill_tree()
 
 func _on_atlas_pressed() -> void:
-	Atlas()
+	Archive()
 
 func menu():
 	$Menu.show()
 	$SkillTree.hide()
-	$Atlas.hide()
+	$Archive.hide()
 	$Gold.hide()
 	$Back.hide()
 	tween_pop($Menu)
@@ -24,12 +24,12 @@ func skill_tree():
 	$Back.show()
 	tween_pop($SkillTree)
 	
-func Atlas():
-	$Atlas.show()
+func Archive():
+	$Archive.show()
 	$Menu.hide()
 	$Gold.hide()
 	$Back.show()
-	tween_pop($Atlas)
+	tween_pop($Archive)
 
 func _on_back_pressed() -> void:
 	menu()
