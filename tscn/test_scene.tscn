@@ -333,11 +333,11 @@ tile_set = SubResource("TileSet_2qreu")
 player = NodePath("../Player")
 
 [node name="Player" parent="." instance=ExtResource("4_x81v8")]
-position = Vector2(641, 376)
+position = Vector2(782, 443)
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
 color = Color(0.606472, 0.523391, 0.970628, 1)
 blend_mode = 2
 
 [node name="Destructible" parent="." instance=ExtResource("5_7ofy1")]
-position = Vector2(1156, 361)
+position = Vector2(1115, 311)

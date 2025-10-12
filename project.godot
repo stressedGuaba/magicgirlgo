@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="magic girl go"
-run/main_scene="uid://qr5gi0nc7qj"
+run/main_scene="uid://di5aejlmogt78"
 config/features=PackedStringArray("4.4", "Forward Plus")
 
 [autoload]
@@ -24,6 +24,7 @@ Persistence="*res://tscn/persistence.tscn"
 
 window/size/viewport_width=1280
 window/size/viewport_height=720
+window/stretch/mode="canvas_items"
 
 [editor_plugins]
 

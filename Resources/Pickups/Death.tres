@@ -10,4 +10,5 @@ title = "Death"
 icon = ExtResource("1_chbkh")
 description = "Kills all enemies !"
 sound = ExtResource("3_r71ry")
+weight = 1.0
 metadata/_custom_type_script = "uid://bsp4xda8w4vl8"

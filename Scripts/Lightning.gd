@@ -44,13 +44,13 @@ func upgrade_item():
 		slot.item = evolution
 		return
 		
-		if not is_upgradable():
-			return
+	if not is_upgradable():
+		return
 		
-		var upgrade = upgrades[level - 1]
+	var upgrade = upgrades[level - 1]
 		
-		amount += upgrade.amount
-		damage += upgrade.damage
-		cooldown += upgrade.cooldown
+	amount += upgrade.amount
+	damage += upgrade.damage
+	cooldown += upgrade.cooldown
 		
-		level += 1
+	level += 1
