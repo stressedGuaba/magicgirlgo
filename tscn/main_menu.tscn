@@ -1,8 +1,9 @@
-[gd_scene load_steps=32 format=3 uid="uid://di5aejlmogt78"]
+[gd_scene load_steps=34 format=3 uid="uid://di5aejlmogt78"]
 
 [ext_resource type="Theme" uid="uid://bhkadhymvm133" path="res://Resources/Theme/ui_theme.tres" id="1_8ph3v"]
 [ext_resource type="PackedScene" uid="uid://ccm0ot6c2uw4j" path="res://tscn/upgrade.tscn" id="1_hpdlp"]
 [ext_resource type="Script" uid="uid://31grvmbetqlv" path="res://tscn/skill_tree.gd" id="1_p6scp"]
+[ext_resource type="Script" uid="uid://eelea502mkd2" path="res://tscn/main_menu.gd" id="2_56gxj"]
 [ext_resource type="Script" uid="uid://dybs4sdxgh08h" path="res://Scripts/Skill.gd" id="2_ymtcx"]
 [ext_resource type="Script" uid="uid://chcop36wk1p6" path="res://Scripts/Stats.gd" id="3_cpdt8"]
 [ext_resource type="Texture2D" uid="uid://cejcfvxdpv03d" path="res://temp assets/temp art/temp might.png" id="4_ra1sj"]
@@ -205,9 +206,39 @@ metadata/_custom_type_script = "uid://dybs4sdxgh08h"
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v4ydv"]
 bg_color = Color(0.960784, 0.85098, 0.882353, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.886275, 0.607843, 0.698039, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xs0r1"]
 bg_color = Color(0.960784, 0.85098, 0.882353, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.886275, 0.607843, 0.698039, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8ph3v"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.886275, 0.607843, 0.698039, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -217,15 +248,16 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_8ph3v")
+script = ExtResource("2_56gxj")
 
 [node name="SkillTree" type="Panel" parent="."]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+pivot_offset = Vector2(520, 360)
 theme_override_styles/panel = SubResource("StyleBoxFlat_56gxj")
 script = ExtResource("1_p6scp")
 
@@ -339,6 +371,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+pivot_offset = Vector2(510, 360)
 
 [node name="Start" type="Button" parent="Menu"]
 layout_mode = 1
@@ -375,15 +408,17 @@ text = "Atlas
 "
 
 [node name="Atlas" type="Panel" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+pivot_offset = Vector2(510, 360)
 
 [node name="ScrollContainer" type="ScrollContainer" parent="Atlas"]
-custom_minimum_size = Vector2(250, 250)
+custom_minimum_size = Vector2(500, 500)
 layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
@@ -400,7 +435,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 
 [node name="Information" type="Panel" parent="Atlas"]
-custom_minimum_size = Vector2(250, 250)
+custom_minimum_size = Vector2(500, 500)
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
@@ -429,27 +464,44 @@ grow_horizontal = 2
 expand_mode = 1
 
 [node name="Panel" type="Panel" parent="Atlas/Information/TextureRect"]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+show_behind_parent = true
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -100.0
+offset_right = 100.0
+offset_bottom = 200.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_8ph3v")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Atlas/Information"]
 layout_mode = 0
-offset_left = 32.0
-offset_top = 160.0
-offset_right = 72.0
-offset_bottom = 200.0
+offset_left = 42.0
+offset_top = 261.0
+offset_right = 93.0
+offset_bottom = 314.0
 
 [node name="Name" type="Label" parent="Atlas/Information/VBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_outline_color = Color(0.886275, 0.607843, 0.698039, 1)
+theme_override_constants/outline_size = 7
+theme_override_font_sizes/font_size = 50
 text = "Name: "
 
 [node name="Damage" type="Label" parent="Atlas/Information/VBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_outline_color = Color(0.886275, 0.607843, 0.698039, 1)
+theme_override_constants/outline_size = 7
+theme_override_font_sizes/font_size = 50
 text = "Damage:"
 
 [node name="Health" type="Label" parent="Atlas/Information/VBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_outline_color = Color(0.886275, 0.607843, 0.698039, 1)
+theme_override_constants/outline_size = 7
+theme_override_font_sizes/font_size = 50
 text = "Health:"
 
 [node name="Gold" type="Label" parent="."]
@@ -479,3 +531,6 @@ grow_vertical = 0
 text = "Back"
 
 [connection signal="pressed" from="Menu/Start" to="Menu/Start" method="_on_pressed"]
+[connection signal="pressed" from="Menu/Upgrades" to="." method="_on_upgrades_pressed"]
+[connection signal="pressed" from="Menu/Atlas" to="." method="_on_atlas_pressed"]
+[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
