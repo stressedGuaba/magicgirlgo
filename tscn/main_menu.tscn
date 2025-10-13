@@ -2,16 +2,16 @@
 
 [ext_resource type="Theme" uid="uid://bhkadhymvm133" path="res://Resources/Theme/ui_theme.tres" id="1_8ph3v"]
 [ext_resource type="PackedScene" uid="uid://ccm0ot6c2uw4j" path="res://tscn/upgrade.tscn" id="1_hpdlp"]
-[ext_resource type="Script" uid="uid://31grvmbetqlv" path="res://tscn/skill_tree.gd" id="1_p6scp"]
-[ext_resource type="Script" uid="uid://eelea502mkd2" path="res://tscn/main_menu.gd" id="2_56gxj"]
+[ext_resource type="Script" uid="uid://31grvmbetqlv" path="res://Scripts/skill_tree.gd" id="1_p6scp"]
+[ext_resource type="Script" uid="uid://eelea502mkd2" path="res://Scripts/main_menu.gd" id="2_56gxj"]
 [ext_resource type="Script" uid="uid://dybs4sdxgh08h" path="res://Scripts/Skill.gd" id="2_ymtcx"]
 [ext_resource type="Script" uid="uid://chcop36wk1p6" path="res://Scripts/Stats.gd" id="3_cpdt8"]
 [ext_resource type="Texture2D" uid="uid://cejcfvxdpv03d" path="res://temp assets/temp art/temp might.png" id="4_ra1sj"]
-[ext_resource type="Script" uid="uid://7u468sh84e6m" path="res://tscn/UI_Gold.gd" id="5_ra1sj"]
+[ext_resource type="Script" uid="uid://7u468sh84e6m" path="res://Scripts/UI_Gold.gd" id="5_ra1sj"]
 [ext_resource type="Texture2D" uid="uid://csn1oopf1vb1w" path="res://temp assets/temp art/temp armor.png" id="6_gwonb"]
 [ext_resource type="Texture2D" uid="uid://bk16ws44btkrt" path="res://temp assets/temp art/temp recovery.png" id="7_mtscv"]
-[ext_resource type="Script" uid="uid://bu845l51e3i3l" path="res://tscn/start.gd" id="9_mtscv"]
-[ext_resource type="Script" uid="uid://cyums46rjrj34" path="res://tscn/enemy_list.gd" id="11_v4ydv"]
+[ext_resource type="Script" uid="uid://bu845l51e3i3l" path="res://Scripts/start.gd" id="9_mtscv"]
+[ext_resource type="Script" uid="uid://cyums46rjrj34" path="res://Scripts/enemy_list.gd" id="11_v4ydv"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_56gxj"]
 bg_color = Color(0.959743, 0.849181, 0.881146, 1)

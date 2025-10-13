@@ -5,8 +5,9 @@
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_tw0d1"]
 size = Vector2(10, 10)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_hsaer"]
-size = Vector2(10, 10)
+[sub_resource type="CircleShape2D" id="CircleShape2D_msun3"]
+resource_local_to_scene = true
+radius = 5.0
 
 [sub_resource type="Gradient" id="Gradient_msun3"]
 offsets = PackedFloat32Array(0, 0.845455, 0.990909, 1)
@@ -46,7 +47,7 @@ script = ExtResource("1_msun3")
 texture = SubResource("PlaceholderTexture2D_tw0d1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_hsaer")
+shape = SubResource("CircleShape2D_msun3")
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
 

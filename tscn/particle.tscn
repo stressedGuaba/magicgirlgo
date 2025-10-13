@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://by2s1k1pkx5y6"]
+
+[ext_resource type="Script" uid="uid://bbpi8e7yo2wwx" path="res://tscn/particle.gd" id="1_kpkwx"]
+
+[node name="Particle" type="GPUParticles2D"]
+emitting = false
+one_shot = true
+script = ExtResource("1_kpkwx")

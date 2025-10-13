@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="Blade" load_steps=5 format=3 uid="uid://b4qd4i5oqrrh0"]
+
+[ext_resource type="Texture2D" uid="uid://kq6u58rlypdx" path="res://temp assets/temp art/temp fancy blade.png" id="1_ogqmh"]
+[ext_resource type="PackedScene" uid="uid://ch5jhaipgeqdb" path="res://tscn/projectile.tscn" id="2_t6wct"]
+[ext_resource type="Script" uid="uid://dygvmif7p2gh0" path="res://Blade.gd" id="3_mn4px"]
+[ext_resource type="Script" uid="uid://wyyxc0g71cnl" path="res://Scripts/Upgrade.gd" id="4_dxh7f"]
+
+[resource]
+script = ExtResource("3_mn4px")
+area = 2.0
+amount = 7
+reversible = false
+delay = 0.2
+damage = 10.0
+cooldown = 3.0
+speed = 1200.0
+projectile_node = ExtResource("2_t6wct")
+upgrades = Array[ExtResource("4_dxh7f")]([])
+title = "Fancy Blade"
+icon = ExtResource("1_ogqmh")
+texture = ExtResource("1_ogqmh")
+metadata/_custom_type_script = "uid://dygvmif7p2gh0"
