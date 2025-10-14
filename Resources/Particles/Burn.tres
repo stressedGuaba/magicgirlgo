@@ -1,0 +1,13 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://bergpc4kcii6c"]
+
+[ext_resource type="Shader" uid="uid://5ybagtc106w4" path="res://tscn/Burn.gdshader" id="1_xc8nv"]
+[ext_resource type="Texture2D" uid="uid://diloot1cqm5k1" path="res://temp assets/temp art/temp enemy1.png" id="2_ja2lb"]
+
+[resource]
+shader = ExtResource("1_xc8nv")
+shader_parameter/dissolve_texture = ExtResource("2_ja2lb")
+shader_parameter/dissolve_value = 0.0
+shader_parameter/burn_size = 0.4
+shader_parameter/ash_color = Color(0, 0, 0, 1)
+shader_parameter/burn_color = Color(3, 0.777, 0.169, 1)
+shader_parameter/proburn_color = Color(3, 0.2, 0.093, 1)

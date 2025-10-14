@@ -1,0 +1,10 @@
+[gd_scene load_steps=4 format=3 uid="uid://dr163kavw8w3s"]
+
+[ext_resource type="Script" uid="uid://e2nn8ixtmrif" path="res://shader_pool.gd" id="1_m26fd"]
+[ext_resource type="Material" uid="uid://bergpc4kcii6c" path="res://Resources/Particles/Burn.tres" id="2_278ta"]
+[ext_resource type="Material" uid="uid://dk5fudxcxyhql" path="res://Shaders/EnemyOutline.tres" id="3_j81wy"]
+
+[node name="ShaderPool" type="Node2D"]
+script = ExtResource("1_m26fd")
+burn = ExtResource("2_278ta")
+outline = ExtResource("3_j81wy")

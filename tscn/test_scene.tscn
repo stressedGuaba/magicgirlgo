@@ -1,10 +1,15 @@
-[gd_scene load_steps=10 format=4 uid="uid://qr5gi0nc7qj"]
+[gd_scene load_steps=11 format=4 uid="uid://qr5gi0nc7qj"]
 
 [ext_resource type="Texture2D" uid="uid://clnif4j2n25ea" path="res://temp assets/TopDownFantasy_Forest_v1/TopDownFantasy-Forest/Tiles/Tileset.png" id="1_tvnlp"]
 [ext_resource type="Texture2D" uid="uid://drel6dd3shics" path="res://temp assets/TopDownFantasy_Forest_v1/TopDownFantasy-Forest/Decorations/Decorations.png" id="2_7ofy1"]
 [ext_resource type="PackedScene" uid="uid://sfhsts2otlix" path="res://tscn/spawner.tscn" id="3_hjv2w"]
 [ext_resource type="PackedScene" uid="uid://dypdpbah2np48" path="res://tscn/player.tscn" id="4_x81v8"]
 [ext_resource type="PackedScene" uid="uid://dvpf71k4t3nht" path="res://tscn/destructible.tscn" id="5_7ofy1"]
+
+[sub_resource type="Environment" id="Environment_7ofy1"]
+background_mode = 3
+glow_enabled = true
+glow_hdr_threshold = 0.1
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lhj0b"]
 texture = ExtResource("1_tvnlp")
@@ -317,6 +322,9 @@ texture = ExtResource("2_7ofy1")
 sources/0 = SubResource("TileSetAtlasSource_aekm5")
 
 [node name="TestScene" type="Node2D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_7ofy1")
 
 [node name="Parallax2D" type="Parallax2D" parent="."]
 repeat_size = Vector2(1048, 720)

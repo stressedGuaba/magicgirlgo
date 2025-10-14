@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://dypdpbah2np48"]
+[gd_scene load_steps=42 format=3 uid="uid://dypdpbah2np48"]
 
 [ext_resource type="Script" uid="uid://liojv5m13c2s" path="res://Scripts/player.gd" id="1_3eola"]
 [ext_resource type="PackedScene" uid="uid://muyl5fbusft4" path="res://tscn/slot.tscn" id="2_3c7ea"]
@@ -16,6 +16,7 @@
 [ext_resource type="Resource" uid="uid://2ay7l782d6fl" path="res://Resources/Passive Items/Lucky Ring.tres" id="10_ovgu5"]
 [ext_resource type="Script" uid="uid://bsgq0brylmugd" path="res://Scripts/chest.gd" id="12_t3r7j"]
 [ext_resource type="Texture2D" uid="uid://bx2jl3hh58xl8" path="res://temp assets/Fantasy RPG (Toony) 32x32.png" id="12_udxxx"]
+[ext_resource type="PackedScene" uid="uid://dandwqxnt4fgo" path="res://tscn/RewardSlot.tscn" id="17_k4k6l"]
 [ext_resource type="Script" uid="uid://bu6iwigvbio3n" path="res://Scripts/back.gd" id="18_k4k6l"]
 
 [sub_resource type="Gradient" id="Gradient_nhqjh"]
@@ -361,50 +362,45 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="TextureRect" type="TextureRect" parent="UI/Chest/Rewards"]
+[node name="RewardSlot" parent="UI/Chest/Rewards" instance=ExtResource("17_k4k6l")]
+visible = false
 layout_mode = 0
-offset_left = 13.0
-offset_top = 98.0
-offset_right = 53.0
-offset_bottom = 138.0
-expand_mode = 1
-stretch_mode = 4
+offset_left = 55.0
+offset_top = 218.0
+offset_right = 95.0
+offset_bottom = 258.0
 
-[node name="TextureRect2" type="TextureRect" parent="UI/Chest/Rewards"]
+[node name="RewardSlot2" parent="UI/Chest/Rewards" instance=ExtResource("17_k4k6l")]
+visible = false
 layout_mode = 0
-offset_left = 105.0
-offset_top = 95.0
-offset_right = 145.0
-offset_bottom = 135.0
-expand_mode = 1
-stretch_mode = 4
+offset_left = 111.0
+offset_top = 136.0
+offset_right = 151.0
+offset_bottom = 176.0
 
-[node name="TextureRect3" type="TextureRect" parent="UI/Chest/Rewards"]
+[node name="RewardSlot3" parent="UI/Chest/Rewards" instance=ExtResource("17_k4k6l")]
+visible = false
 layout_mode = 0
-offset_left = 217.0
-offset_top = 85.0
-offset_right = 257.0
-offset_bottom = 125.0
-expand_mode = 1
-stretch_mode = 3
+offset_left = 230.0
+offset_top = 99.0
+offset_right = 270.0
+offset_bottom = 139.0
 
-[node name="TextureRect4" type="TextureRect" parent="UI/Chest/Rewards"]
+[node name="RewardSlot4" parent="UI/Chest/Rewards" instance=ExtResource("17_k4k6l")]
+visible = false
 layout_mode = 0
-offset_left = 311.0
-offset_top = 98.0
-offset_right = 351.0
-offset_bottom = 138.0
-expand_mode = 1
-stretch_mode = 4
+offset_left = 341.0
+offset_top = 131.0
+offset_right = 381.0
+offset_bottom = 171.0
 
-[node name="TextureRect5" type="TextureRect" parent="UI/Chest/Rewards"]
+[node name="RewardSlot5" parent="UI/Chest/Rewards" instance=ExtResource("17_k4k6l")]
+visible = false
 layout_mode = 0
-offset_left = 423.0
-offset_top = 87.0
-offset_right = 463.0
-offset_bottom = 127.0
-expand_mode = 1
-stretch_mode = 4
+offset_left = 409.0
+offset_top = 215.0
+offset_right = 449.0
+offset_bottom = 255.0
 
 [node name="Back" type="Button" parent="UI"]
 process_mode = 3

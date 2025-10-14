@@ -20,6 +20,7 @@ SoundManager="*res://tscn/sound_manager.tscn"
 SaveData="*res://tscn/save_data.tscn"
 Persistence="*res://tscn/persistence.tscn"
 ParticleFX="*res://tscn/particle_fx.tscn"
+ShaderPool="*res://tscn/shader_pool.tscn"
 
 [display]
 
