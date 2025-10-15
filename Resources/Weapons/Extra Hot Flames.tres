@@ -1,12 +1,13 @@
-[gd_resource type="Resource" script_class="MultiDamagingArea" load_steps=5 format=3 uid="uid://sl2udemjq4ur"]
+[gd_resource type="Resource" script_class="MultiDamagingArea" load_steps=6 format=3 uid="uid://sl2udemjq4ur"]
 
 [ext_resource type="Texture2D" uid="uid://d0okrsqw2nqkq" path="res://temp assets/temp art/temp flames p2.png" id="1_3h1ow"]
+[ext_resource type="Material" uid="uid://bhoiyaat7cnot" path="res://Resources/Particles/Weapon Particles/fire.tres" id="2_fhtgf"]
 [ext_resource type="PackedScene" uid="uid://ch5jhaipgeqdb" path="res://tscn/projectile.tscn" id="2_gwhfb"]
-[ext_resource type="Script" uid="uid://dd75w03ui1q7s" path="res://Scripts/MultiDamagingArea.gd" id="3_fhtgf"]
 [ext_resource type="Script" uid="uid://wyyxc0g71cnl" path="res://Scripts/Upgrade.gd" id="4_hb3vl"]
+[ext_resource type="Script" uid="uid://dd75w03ui1q7s" path="res://Scripts/Weapons Scripts/MultiDamagingArea.gd" id="4_umwxc"]
 
 [resource]
-script = ExtResource("3_fhtgf")
+script = ExtResource("4_umwxc")
 amount = 7
 area = 5.0
 delay = 0.1
@@ -15,6 +16,7 @@ cooldown = 4.0
 speed = 0.0
 projectile_node = ExtResource("2_gwhfb")
 upgrades = Array[ExtResource("4_hb3vl")]([])
+particle = ExtResource("2_fhtgf")
 title = "Extra Hot Flames (idk)"
 icon = ExtResource("1_3h1ow")
 texture = ExtResource("1_3h1ow")

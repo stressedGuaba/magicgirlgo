@@ -1,12 +1,13 @@
-[gd_resource type="Resource" script_class="Blade" load_steps=13 format=3 uid="uid://crjh38g6nthbe"]
+[gd_resource type="Resource" script_class="Blade" load_steps=14 format=3 uid="uid://crjh38g6nthbe"]
 
 [ext_resource type="Resource" uid="uid://b4qd4i5oqrrh0" path="res://Resources/Weapons/Fancy Blade.tres" id="1_3ftt4"]
 [ext_resource type="Texture2D" uid="uid://3vs4v2xscjy5" path="res://temp assets/temp art/temp star.png" id="1_qs5qj"]
 [ext_resource type="Resource" uid="uid://2ay7l782d6fl" path="res://Resources/Passive Items/Lucky Ring.tres" id="2_ft3hm"]
 [ext_resource type="PackedScene" uid="uid://ch5jhaipgeqdb" path="res://tscn/projectile.tscn" id="2_sa5yo"]
-[ext_resource type="Script" uid="uid://dygvmif7p2gh0" path="res://Blade.gd" id="3_ft3hm"]
+[ext_resource type="Script" uid="uid://dygvmif7p2gh0" path="res://Scripts/Weapons Scripts/Blade.gd" id="3_ft3hm"]
 [ext_resource type="Script" uid="uid://wyyxc0g71cnl" path="res://Scripts/Upgrade.gd" id="4_3ftt4"]
-[ext_resource type="Script" uid="uid://cposbwrhu1u8r" path="res://BladeUpgrade.gd" id="6_3ftt4"]
+[ext_resource type="Material" uid="uid://cr1bhcpu5d4a4" path="res://Resources/Particles/Weapon Particles/Magic.tres" id="4_yyuyp"]
+[ext_resource type="Script" uid="uid://cposbwrhu1u8r" path="res://Scripts/BladeUpgrade.gd" id="6_3ftt4"]
 
 [sub_resource type="Resource" id="Resource_yyuyp"]
 script = ExtResource("6_3ftt4")
@@ -71,6 +72,7 @@ projectile_node = ExtResource("2_sa5yo")
 upgrades = Array[ExtResource("4_3ftt4")]([SubResource("Resource_yyuyp"), SubResource("Resource_b813m"), SubResource("Resource_ndolo"), SubResource("Resource_knqb0"), SubResource("Resource_yhfvf")])
 item_needed = ExtResource("2_ft3hm")
 evolution = ExtResource("1_3ftt4")
+particle = ExtResource("4_yyuyp")
 title = "Blade"
 icon = ExtResource("1_qs5qj")
 texture = ExtResource("1_qs5qj")

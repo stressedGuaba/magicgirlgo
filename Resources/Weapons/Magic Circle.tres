@@ -1,15 +1,16 @@
-[gd_resource type="Resource" script_class="DamagingArea" load_steps=13 format=3 uid="uid://4jschgpfdhap"]
+[gd_resource type="Resource" script_class="DamagingArea" load_steps=14 format=3 uid="uid://4jschgpfdhap"]
 
 [ext_resource type="Resource" uid="uid://dltwqhxcet5mi" path="res://Resources/Weapons/Summoner Circle.tres" id="1_f8gq4"]
 [ext_resource type="Texture2D" uid="uid://c6arj7vu83tul" path="res://temp assets/temp art/temp magic circle.png" id="1_gme0n"]
 [ext_resource type="PackedScene" uid="uid://ch5jhaipgeqdb" path="res://tscn/projectile.tscn" id="2_aujso"]
 [ext_resource type="Resource" uid="uid://bul87kwod6s5m" path="res://Resources/Passive Items/Max Health.tres" id="2_f8gq4"]
-[ext_resource type="Script" uid="uid://2oa8vlfb1dof" path="res://Scripts/DamagingArea.gd" id="3_f8gq4"]
+[ext_resource type="Material" uid="uid://cr1bhcpu5d4a4" path="res://Resources/Particles/Weapon Particles/Magic.tres" id="4_5jyjk"]
 [ext_resource type="Script" uid="uid://wyyxc0g71cnl" path="res://Scripts/Upgrade.gd" id="4_n4t63"]
-[ext_resource type="Script" uid="uid://dfnqwc7saqkbu" path="res://Scripts/DamagingAreaUpgrade.gd" id="5_5jyjk"]
+[ext_resource type="Script" uid="uid://2oa8vlfb1dof" path="res://Scripts/Weapons Scripts/DamagingArea.gd" id="6_qsety"]
+[ext_resource type="Script" uid="uid://dfnqwc7saqkbu" path="res://Scripts/Weapons Scripts/DamagingAreaUpgrade.gd" id="8_3aq1j"]
 
 [sub_resource type="Resource" id="Resource_qsety"]
-script = ExtResource("5_5jyjk")
+script = ExtResource("8_3aq1j")
 area = 0.0
 damage = 2.0
 cooldown = 0.0
@@ -17,7 +18,7 @@ description = "+2 Damage"
 metadata/_custom_type_script = "uid://dfnqwc7saqkbu"
 
 [sub_resource type="Resource" id="Resource_3aq1j"]
-script = ExtResource("5_5jyjk")
+script = ExtResource("8_3aq1j")
 area = 0.0
 damage = 0.0
 cooldown = -0.2
@@ -25,7 +26,7 @@ description = "-0.2s Cooldown"
 metadata/_custom_type_script = "uid://dfnqwc7saqkbu"
 
 [sub_resource type="Resource" id="Resource_3lhne"]
-script = ExtResource("5_5jyjk")
+script = ExtResource("8_3aq1j")
 area = 0.25
 damage = 0.0
 cooldown = 0.0
@@ -33,7 +34,7 @@ description = "+25% Area"
 metadata/_custom_type_script = "uid://dfnqwc7saqkbu"
 
 [sub_resource type="Resource" id="Resource_jiixc"]
-script = ExtResource("5_5jyjk")
+script = ExtResource("8_3aq1j")
 area = 0.0
 damage = 0.0
 cooldown = -0.2
@@ -41,7 +42,7 @@ description = "-0.2s Cooldown"
 metadata/_custom_type_script = "uid://dfnqwc7saqkbu"
 
 [sub_resource type="Resource" id="Resource_lyjba"]
-script = ExtResource("5_5jyjk")
+script = ExtResource("8_3aq1j")
 area = 0.0
 damage = 2.0
 cooldown = 0.0
@@ -49,7 +50,7 @@ description = "+2 Damage"
 metadata/_custom_type_script = "uid://dfnqwc7saqkbu"
 
 [resource]
-script = ExtResource("3_f8gq4")
+script = ExtResource("6_qsety")
 angular_speed = 10.0
 area = 0.5
 damage = 1.0
@@ -59,6 +60,7 @@ projectile_node = ExtResource("2_aujso")
 upgrades = Array[ExtResource("4_n4t63")]([SubResource("Resource_qsety"), SubResource("Resource_3aq1j"), SubResource("Resource_3lhne"), SubResource("Resource_jiixc"), SubResource("Resource_lyjba")])
 item_needed = ExtResource("2_f8gq4")
 evolution = ExtResource("1_f8gq4")
+particle = ExtResource("4_5jyjk")
 title = "Magic Circle"
 icon = ExtResource("1_gme0n")
 texture = ExtResource("1_gme0n")

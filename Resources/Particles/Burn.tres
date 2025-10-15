@@ -1,6 +1,6 @@
 [gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://bergpc4kcii6c"]
 
-[ext_resource type="Shader" uid="uid://5ybagtc106w4" path="res://tscn/Burn.gdshader" id="1_xc8nv"]
+[ext_resource type="Shader" uid="uid://5ybagtc106w4" path="res://Shaders/Burn.gdshader" id="1_xc8nv"]
 [ext_resource type="Texture2D" uid="uid://diloot1cqm5k1" path="res://temp assets/temp art/temp enemy1.png" id="2_ja2lb"]
 
 [resource]

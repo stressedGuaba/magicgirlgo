@@ -1,12 +1,13 @@
-[gd_resource type="Resource" script_class="DamagingArea" load_steps=5 format=3 uid="uid://dltwqhxcet5mi"]
+[gd_resource type="Resource" script_class="DamagingArea" load_steps=6 format=3 uid="uid://dltwqhxcet5mi"]
 
 [ext_resource type="Texture2D" uid="uid://b2ollc3c5obt6" path="res://temp assets/temp art/temp summoners circle.png" id="1_g5mql"]
+[ext_resource type="Material" uid="uid://cr1bhcpu5d4a4" path="res://Resources/Particles/Weapon Particles/Magic.tres" id="2_0sxe4"]
 [ext_resource type="PackedScene" uid="uid://ch5jhaipgeqdb" path="res://tscn/projectile.tscn" id="2_2rfxm"]
-[ext_resource type="Script" uid="uid://2oa8vlfb1dof" path="res://Scripts/DamagingArea.gd" id="3_0sxe4"]
+[ext_resource type="Script" uid="uid://2oa8vlfb1dof" path="res://Scripts/Weapons Scripts/DamagingArea.gd" id="4_n0ovs"]
 [ext_resource type="Script" uid="uid://wyyxc0g71cnl" path="res://Scripts/Upgrade.gd" id="4_wr1bj"]
 
 [resource]
-script = ExtResource("3_0sxe4")
+script = ExtResource("4_n0ovs")
 angular_speed = 30.0
 area = 1.0
 damage = 10.0
@@ -14,6 +15,7 @@ cooldown = 0.5
 speed = 0.0
 projectile_node = ExtResource("2_2rfxm")
 upgrades = Array[ExtResource("4_wr1bj")]([])
+particle = ExtResource("2_0sxe4")
 title = "Summoner's Circle"
 icon = ExtResource("1_g5mql")
 texture = ExtResource("1_g5mql")

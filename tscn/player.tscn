@@ -239,6 +239,18 @@ item = ExtResource("6_88mv1")
 layout_mode = 2
 item = ExtResource("7_42mp7")
 
+[node name="Slot4" parent="UI/Weapons" instance=ExtResource("2_3c7ea")]
+layout_mode = 2
+item = ExtResource("7_42mp7")
+
+[node name="Slot5" parent="UI/Weapons" instance=ExtResource("2_3c7ea")]
+layout_mode = 2
+item = ExtResource("7_42mp7")
+
+[node name="Slot6" parent="UI/Weapons" instance=ExtResource("2_3c7ea")]
+layout_mode = 2
+item = ExtResource("7_42mp7")
+
 [node name="PassiveItems" type="HBoxContainer" parent="UI"]
 offset_top = 51.0
 offset_right = 128.0
@@ -252,6 +264,18 @@ layout_mode = 2
 item = ExtResource("8_88mv1")
 
 [node name="PassiveSlot3" parent="UI/PassiveItems" instance=ExtResource("5_kai0q")]
+layout_mode = 2
+item = ExtResource("10_ovgu5")
+
+[node name="PassiveSlot4" parent="UI/PassiveItems" instance=ExtResource("5_kai0q")]
+layout_mode = 2
+item = ExtResource("10_ovgu5")
+
+[node name="PassiveSlot5" parent="UI/PassiveItems" instance=ExtResource("5_kai0q")]
+layout_mode = 2
+item = ExtResource("10_ovgu5")
+
+[node name="PassiveSlot6" parent="UI/PassiveItems" instance=ExtResource("5_kai0q")]
 layout_mode = 2
 item = ExtResource("10_ovgu5")
 

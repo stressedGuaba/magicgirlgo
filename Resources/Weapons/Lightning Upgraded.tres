@@ -1,8 +1,9 @@
-[gd_resource type="Resource" script_class="Lightning" load_steps=5 format=3 uid="uid://ciykgxq5kx0gj"]
+[gd_resource type="Resource" script_class="Lightning" load_steps=6 format=3 uid="uid://ciykgxq5kx0gj"]
 
 [ext_resource type="Texture2D" uid="uid://dysj8h45brxok" path="res://temp assets/temp art/temp lightning upgraded.png" id="1_iekiw"]
 [ext_resource type="PackedScene" uid="uid://ch5jhaipgeqdb" path="res://tscn/projectile.tscn" id="2_52ghr"]
-[ext_resource type="Script" uid="uid://b2a7g2aoa8ix6" path="res://Scripts/Lightning.gd" id="3_lq6tu"]
+[ext_resource type="Material" uid="uid://cr1bhcpu5d4a4" path="res://Resources/Particles/Weapon Particles/Magic.tres" id="2_lq6tu"]
+[ext_resource type="Script" uid="uid://b2a7g2aoa8ix6" path="res://Scripts/Weapons Scripts/Lightning.gd" id="3_lq6tu"]
 [ext_resource type="Script" uid="uid://wyyxc0g71cnl" path="res://Scripts/Upgrade.gd" id="4_si11n"]
 
 [resource]
@@ -13,6 +14,7 @@ cooldown = 2.0
 speed = 0.0
 projectile_node = ExtResource("2_52ghr")
 upgrades = Array[ExtResource("4_si11n")]([])
+particle = ExtResource("2_lq6tu")
 title = "Lightning Upgraded"
 icon = ExtResource("1_iekiw")
 texture = ExtResource("1_iekiw")

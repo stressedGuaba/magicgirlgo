@@ -1,8 +1,9 @@
-[gd_resource type="Resource" script_class="Circular" load_steps=5 format=3 uid="uid://djy2i5iksmm5c"]
+[gd_resource type="Resource" script_class="Circular" load_steps=6 format=3 uid="uid://djy2i5iksmm5c"]
 
 [ext_resource type="Texture2D" uid="uid://7gabvw5xdjvg" path="res://temp assets/temp art/temp huge asteroid.png" id="1_smisi"]
+[ext_resource type="Material" uid="uid://cr1bhcpu5d4a4" path="res://Resources/Particles/Weapon Particles/Magic.tres" id="2_mliah"]
 [ext_resource type="PackedScene" uid="uid://ch5jhaipgeqdb" path="res://tscn/projectile.tscn" id="2_xlr6u"]
-[ext_resource type="Script" uid="uid://bj2wdckdxp4xr" path="res://Scripts/CircularWeapon.gd" id="3_mliah"]
+[ext_resource type="Script" uid="uid://bj2wdckdxp4xr" path="res://Scripts/Weapons Scripts/CircularWeapon.gd" id="3_mliah"]
 [ext_resource type="Script" uid="uid://wyyxc0g71cnl" path="res://Scripts/Upgrade.gd" id="4_ectla"]
 
 [resource]
@@ -15,6 +16,7 @@ cooldown = 2.0
 speed = 0.0
 projectile_node = ExtResource("2_xlr6u")
 upgrades = Array[ExtResource("4_ectla")]([])
+particle = ExtResource("2_mliah")
 title = "Huge Asteroid"
 icon = ExtResource("1_smisi")
 texture = ExtResource("1_smisi")
