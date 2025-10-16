@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="Character" load_steps=6 format=3 uid="uid://d3vvmersn47lq"]
+
+[ext_resource type="Script" uid="uid://chcop36wk1p6" path="res://Scripts/Stats.gd" id="1_2vv0u"]
+[ext_resource type="Texture2D" uid="uid://r5oclhen2f7s" path="res://Assets (perm)/jiraiya.png" id="2_2if5b"]
+[ext_resource type="Script" uid="uid://3jynj6ipwhpo" path="res://Scripts/Character.gd" id="2_qsf4p"]
+[ext_resource type="Resource" uid="uid://crjh38g6nthbe" path="res://Resources/Weapons/Blade.tres" id="3_2if5b"]
+
+[sub_resource type="Resource" id="Resource_vdqgv"]
+script = ExtResource("1_2vv0u")
+description = ""
+max_health = 0.0
+recovery = 0.0
+armor = 0.0
+movement_speed = 0.0
+might = 0.0
+area = 0.0
+magnet = 0.0
+growth = 0.0
+luck = 0.0
+metadata/_custom_type_script = "uid://chcop36wk1p6"
+
+[resource]
+script = ExtResource("2_qsf4p")
+title = "Jiraiya"
+icon = ExtResource("2_2if5b")
+animation_name = "jiraikei"
+base_stats = SubResource("Resource_vdqgv")
+starting_weapon = ExtResource("3_2if5b")
+metadata/_custom_type_script = "uid://3jynj6ipwhpo"

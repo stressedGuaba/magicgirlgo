@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="Character" load_steps=6 format=3 uid="uid://bnn486qm7fkbd"]
+
+[ext_resource type="Script" uid="uid://chcop36wk1p6" path="res://Scripts/Stats.gd" id="1_wgyuu"]
+[ext_resource type="Texture2D" uid="uid://frhf1dgm7ib" path="res://temp assets/temp art/temp iroha.png" id="2_b3qm5"]
+[ext_resource type="Script" uid="uid://3jynj6ipwhpo" path="res://Scripts/Character.gd" id="3_ds3xn"]
+[ext_resource type="Resource" uid="uid://4jschgpfdhap" path="res://Resources/Weapons/Magic Circle.tres" id="4_myraa"]
+
+[sub_resource type="Resource" id="Resource_43ax5"]
+script = ExtResource("1_wgyuu")
+description = ""
+max_health = 0.0
+recovery = 0.0
+armor = 0.0
+movement_speed = 0.0
+might = 0.0
+area = 0.0
+magnet = 0.0
+growth = 0.0
+luck = 0.0
+metadata/_custom_type_script = "uid://chcop36wk1p6"
+
+[resource]
+script = ExtResource("3_ds3xn")
+title = "Iroha"
+icon = ExtResource("2_b3qm5")
+animation_name = "Iroha"
+base_stats = SubResource("Resource_43ax5")
+starting_weapon = ExtResource("4_myraa")
+metadata/_custom_type_script = "uid://3jynj6ipwhpo"

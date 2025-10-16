@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="Character" load_steps=6 format=3 uid="uid://du7vmf1agalab"]
+
+[ext_resource type="Script" uid="uid://chcop36wk1p6" path="res://Scripts/Stats.gd" id="1_1yjg5"]
+[ext_resource type="Texture2D" uid="uid://r5oclhen2f7s" path="res://Assets (perm)/jiraiya.png" id="2_irf2o"]
+[ext_resource type="Script" uid="uid://3jynj6ipwhpo" path="res://Scripts/Character.gd" id="3_0yl21"]
+[ext_resource type="Resource" uid="uid://eovbkwcej6i1" path="res://Resources/Weapons/Magic Wand.tres" id="4_752pu"]
+
+[sub_resource type="Resource" id="Resource_kcbyc"]
+script = ExtResource("1_1yjg5")
+description = ""
+max_health = 0.0
+recovery = 0.0
+armor = 0.0
+movement_speed = 0.0
+might = 0.0
+area = 0.0
+magnet = 0.0
+growth = 0.0
+luck = 0.0
+metadata/_custom_type_script = "uid://chcop36wk1p6"
+
+[resource]
+script = ExtResource("3_0yl21")
+title = "Soda"
+icon = ExtResource("2_irf2o")
+animation_name = "placeholder"
+base_stats = SubResource("Resource_kcbyc")
+starting_weapon = ExtResource("4_752pu")
+metadata/_custom_type_script = "uid://3jynj6ipwhpo"

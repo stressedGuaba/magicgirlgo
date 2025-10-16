@@ -1,5 +1,5 @@
 extends CharacterBody2D
-
+@export var character : Character
 
 var health : float = 100:
 	##make health a setter variable to update progress bar
@@ -66,6 +66,10 @@ var distance_in_pixel : float
 
 func _ready():
 	Persistence.gain_bonus_stats(self)
+	character = Persistence.character
+	set_base_stats(character.base_stats)
+	%Options.check_item(character.starting_character)
+	
 
 
 func _physics_process(delta: float) -> void:
@@ -121,3 +125,14 @@ func gain_gold(amount):
 			
 func open_chest():
 	$UI/Chest.open()
+
+func set_base_stats(base_stats : Stats):
+	max_health += base_stats.max_health
+	recovery += base_stats.recovery
+	armor += base_stats.armor
+	movement_speed += base_stats.movement_speed
+	might  += base_stats.armor
+	area += base_stats.area
+	magnet += base_stats.magnet
+	growth += base_stats.growth
+	luck += base_stats.luck

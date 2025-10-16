@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://di5aejlmogt78"]
+[gd_scene load_steps=41 format=3 uid="uid://di5aejlmogt78"]
 
 [ext_resource type="Theme" uid="uid://bhkadhymvm133" path="res://Resources/Theme/ui_theme.tres" id="1_8ph3v"]
 [ext_resource type="PackedScene" uid="uid://ccm0ot6c2uw4j" path="res://tscn/upgrade.tscn" id="1_hpdlp"]
@@ -10,8 +10,13 @@
 [ext_resource type="Script" uid="uid://7u468sh84e6m" path="res://Scripts/UI_Gold.gd" id="5_ra1sj"]
 [ext_resource type="Texture2D" uid="uid://csn1oopf1vb1w" path="res://temp assets/temp art/temp armor.png" id="6_gwonb"]
 [ext_resource type="Texture2D" uid="uid://bk16ws44btkrt" path="res://temp assets/temp art/temp recovery.png" id="7_mtscv"]
+[ext_resource type="Script" uid="uid://vqcllo8yuvm6" path="res://tscn/character_list.gd" id="11_mdeww"]
 [ext_resource type="Script" uid="uid://cyums46rjrj34" path="res://Scripts/enemy_list.gd" id="11_v4ydv"]
 [ext_resource type="Script" uid="uid://b4jl87xvqpxhn" path="res://tscn/start.gd" id="11_xs0r1"]
+[ext_resource type="Script" uid="uid://3jynj6ipwhpo" path="res://Scripts/Character.gd" id="12_oxpvy"]
+[ext_resource type="Resource" uid="uid://d3vvmersn47lq" path="res://Resources/Characters/Jiraiya.tres" id="13_823vn"]
+[ext_resource type="Resource" uid="uid://bnn486qm7fkbd" path="res://Resources/Characters/Iroha.tres" id="14_d22yr"]
+[ext_resource type="Resource" uid="uid://du7vmf1agalab" path="res://Resources/Characters/Soda.tres" id="15_ged0i"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_56gxj"]
 bg_color = Color(0.959743, 0.849181, 0.881146, 1)
@@ -543,6 +548,8 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_mdeww")
 [node name="CharacterList" type="GridContainer" parent="CharacterSelection/ScrollContainer"]
 layout_mode = 2
 columns = 3
+script = ExtResource("11_mdeww")
+characters = Array[ExtResource("12_oxpvy")]([ExtResource("13_823vn"), ExtResource("14_d22yr"), ExtResource("15_ged0i")])
 
 [node name="Panel" type="Panel" parent="CharacterSelection"]
 custom_minimum_size = Vector2(160, 450)
@@ -568,7 +575,7 @@ offset_bottom = -64.0
 theme_override_font_sizes/font_size = 50
 text = "¢ Choose Your Fighter! ¢"
 
-[node name="Button" type="Button" parent="CharacterSelection"]
+[node name="Start" type="Button" parent="CharacterSelection"]
 layout_mode = 0
 offset_left = 952.0
 offset_top = 640.0
