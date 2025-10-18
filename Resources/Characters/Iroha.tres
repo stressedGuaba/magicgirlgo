@@ -23,6 +23,7 @@ metadata/_custom_type_script = "uid://chcop36wk1p6"
 script = ExtResource("3_ds3xn")
 title = "Iroha"
 icon = ExtResource("2_b3qm5")
+cost = 0
 animation_name = "Iroha"
 base_stats = SubResource("Resource_43ax5")
 starting_weapon = ExtResource("4_myraa")

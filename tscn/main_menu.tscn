@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://di5aejlmogt78"]
+[gd_scene load_steps=42 format=3 uid="uid://di5aejlmogt78"]
 
 [ext_resource type="Theme" uid="uid://bhkadhymvm133" path="res://Resources/Theme/ui_theme.tres" id="1_8ph3v"]
 [ext_resource type="PackedScene" uid="uid://ccm0ot6c2uw4j" path="res://tscn/upgrade.tscn" id="1_hpdlp"]
@@ -13,6 +13,7 @@
 [ext_resource type="Script" uid="uid://vqcllo8yuvm6" path="res://tscn/character_list.gd" id="11_mdeww"]
 [ext_resource type="Script" uid="uid://cyums46rjrj34" path="res://Scripts/enemy_list.gd" id="11_v4ydv"]
 [ext_resource type="Script" uid="uid://b4jl87xvqpxhn" path="res://tscn/start.gd" id="11_xs0r1"]
+[ext_resource type="PackedScene" uid="uid://dgjriwv0lk5mg" path="res://tscn/character_slot.tscn" id="12_823vn"]
 [ext_resource type="Script" uid="uid://3jynj6ipwhpo" path="res://Scripts/Character.gd" id="12_oxpvy"]
 [ext_resource type="Resource" uid="uid://d3vvmersn47lq" path="res://Resources/Characters/Jiraiya.tres" id="13_823vn"]
 [ext_resource type="Resource" uid="uid://bnn486qm7fkbd" path="res://Resources/Characters/Iroha.tres" id="14_d22yr"]
@@ -549,6 +550,7 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_mdeww")
 layout_mode = 2
 columns = 3
 script = ExtResource("11_mdeww")
+character_slot = ExtResource("12_823vn")
 characters = Array[ExtResource("12_oxpvy")]([ExtResource("13_823vn"), ExtResource("14_d22yr"), ExtResource("15_ged0i")])
 
 [node name="Panel" type="Panel" parent="CharacterSelection"]
@@ -617,4 +619,5 @@ text = "Back"
 
 [connection signal="pressed" from="Menu/Upgrades" to="." method="_on_upgrades_pressed"]
 [connection signal="pressed" from="Menu/Archive" to="." method="_on_atlas_pressed"]
+[connection signal="pressed" from="CharacterSelection/Start" to="CharacterSelection/Start" method="_on_pressed"]
 [connection signal="pressed" from="Back" to="." method="_on_back_pressed"]

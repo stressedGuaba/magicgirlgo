@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=3 uid="uid://dypdpbah2np48"]
+[gd_scene load_steps=44 format=3 uid="uid://dypdpbah2np48"]
 
 [ext_resource type="Script" uid="uid://liojv5m13c2s" path="res://Scripts/player.gd" id="1_3eola"]
 [ext_resource type="PackedScene" uid="uid://muyl5fbusft4" path="res://tscn/slot.tscn" id="2_3c7ea"]
@@ -7,11 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://c4ah5tb45h6tm" path="res://temp assets/temp art/Under.png" id="4_hsluc"]
 [ext_resource type="Texture2D" uid="uid://b4xuxxla2ku1w" path="res://temp assets/temp art/Over.png" id="5_1q7bi"]
 [ext_resource type="PackedScene" uid="uid://odlo86cvmg1e" path="res://tscn/passive_slot.tscn" id="5_kai0q"]
-[ext_resource type="Resource" uid="uid://4jschgpfdhap" path="res://Resources/Weapons/Magic Circle.tres" id="5_t3r7j"]
-[ext_resource type="Resource" uid="uid://dfpt1ohwpb0r5" path="res://Resources/Weapons/Flames.tres" id="6_88mv1"]
 [ext_resource type="Texture2D" uid="uid://b2ems1u7svq7o" path="res://temp assets/temp art/Progress.png" id="6_ne3il"]
 [ext_resource type="Script" uid="uid://bj8f6lg30wklr" path="res://Scripts/options.gd" id="7_1q7bi"]
-[ext_resource type="Resource" uid="uid://crjh38g6nthbe" path="res://Resources/Weapons/Blade.tres" id="7_42mp7"]
 [ext_resource type="Resource" uid="uid://b0gs1fskg1n27" path="res://Resources/Passive Items/Area.tres" id="8_88mv1"]
 [ext_resource type="Resource" uid="uid://2ay7l782d6fl" path="res://Resources/Passive Items/Lucky Ring.tres" id="10_ovgu5"]
 [ext_resource type="Script" uid="uid://bsgq0brylmugd" path="res://Scripts/chest.gd" id="12_t3r7j"]
@@ -153,9 +150,8 @@ corner_radius_bottom_left = 4
 shadow_size = 1
 shadow_offset = Vector2(2, 2)
 
-[sub_resource type="Animation" id="Animation_6k074"]
-resource_name = "idle_jiraiya"
-step = 12.0
+[sub_resource type="Animation" id="Animation_48787"]
+length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -163,10 +159,10 @@ tracks/0/path = NodePath("Sprite2D:hframes")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [1, 1]
+"values": [1]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -175,10 +171,10 @@ tracks/1/path = NodePath("Sprite2D:vframes")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [1, 1]
+"values": [1]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -257,8 +253,9 @@ tracks/3/keys = {
 "values": [Vector2i(0, 0), Vector2i(0, 0)]
 }
 
-[sub_resource type="Animation" id="Animation_48787"]
-length = 0.001
+[sub_resource type="Animation" id="Animation_6k074"]
+resource_name = "idle_jiraiya"
+step = 12.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -266,10 +263,10 @@ tracks/0/path = NodePath("Sprite2D:hframes")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [1]
+"values": [1, 1]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -278,10 +275,10 @@ tracks/1/path = NodePath("Sprite2D:vframes")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [1]
+"values": [1, 1]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -442,27 +439,21 @@ offset_bottom = 40.0
 
 [node name="Slot" parent="UI/Weapons" instance=ExtResource("2_3c7ea")]
 layout_mode = 2
-item = ExtResource("5_t3r7j")
 
 [node name="Slot2" parent="UI/Weapons" instance=ExtResource("2_3c7ea")]
 layout_mode = 2
-item = ExtResource("6_88mv1")
 
 [node name="Slot3" parent="UI/Weapons" instance=ExtResource("2_3c7ea")]
 layout_mode = 2
-item = ExtResource("7_42mp7")
 
 [node name="Slot4" parent="UI/Weapons" instance=ExtResource("2_3c7ea")]
 layout_mode = 2
-item = ExtResource("7_42mp7")
 
 [node name="Slot5" parent="UI/Weapons" instance=ExtResource("2_3c7ea")]
 layout_mode = 2
-item = ExtResource("7_42mp7")
 
 [node name="Slot6" parent="UI/Weapons" instance=ExtResource("2_3c7ea")]
 layout_mode = 2
-item = ExtResource("7_42mp7")
 
 [node name="PassiveItems" type="HBoxContainer" parent="UI"]
 offset_top = 51.0

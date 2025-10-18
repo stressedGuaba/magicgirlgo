@@ -23,6 +23,7 @@ metadata/_custom_type_script = "uid://chcop36wk1p6"
 script = ExtResource("2_qsf4p")
 title = "Jiraiya"
 icon = ExtResource("2_2if5b")
+cost = 0
 animation_name = "jiraikei"
 base_stats = SubResource("Resource_vdqgv")
 starting_weapon = ExtResource("3_2if5b")

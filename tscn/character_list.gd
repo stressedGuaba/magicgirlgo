@@ -18,4 +18,4 @@ func load_characters():
  
 func _on_pressed(character : Character):
 	Persistence.character = character
-	starting_character.texture = character.starting_character.icon
+	starting_character.texture = character.icon

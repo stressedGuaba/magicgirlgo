@@ -23,6 +23,7 @@ metadata/_custom_type_script = "uid://chcop36wk1p6"
 script = ExtResource("3_0yl21")
 title = "Soda"
 icon = ExtResource("2_irf2o")
+cost = 0
 animation_name = "placeholder"
 base_stats = SubResource("Resource_kcbyc")
 starting_weapon = ExtResource("4_752pu")
